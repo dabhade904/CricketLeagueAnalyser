@@ -145,7 +145,7 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.readCricketMostRunsData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getMostSixAndFor();
+            List<Batsman> sortedData = cricketAnalyse.getMostSixAndFour();
             System.out.println(sortedData);
             Assert.assertEquals("Andre Russell", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
@@ -153,17 +153,40 @@ public class CricketAnalyserTest {
         }
     }
 
-
     @Test
     public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd() {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.readCricketMostRunsData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getMostSixAndFor();
+            List<Batsman> sortedData = cricketAnalyse.getMostSixAndFour();
             Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
     }
 
+    @Test
+    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate() {
+        CricketAnalyser cricketAnalyse = new CricketAnalyser();
+        try {
+            cricketAnalyse.readCricketMostRunsData(IPL2019_RUNS_CSV_FILE_PATH);
+            List<Batsman> sortedData = cricketAnalyse.getBestStrikeRateSixAndFour();
+            Assert.assertEquals("Andre Russell", sortedData.get(0).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate() {
+        try {
+            CricketAnalyser cricketAnalyse = new CricketAnalyser();
+            cricketAnalyse.readCricketMostRunsData(IPL2019_RUNS_CSV_FILE_PATH);
+            List<Batsman> sortedData = cricketAnalyse.getBestStrikeRateSixAndFour();
+            Assert.assertEquals("Shakib Al Hasan", sortedData.get(99).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
+

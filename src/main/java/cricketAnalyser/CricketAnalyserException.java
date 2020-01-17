@@ -1,11 +1,11 @@
 package cricketAnalyser;
 
-public class CricketAnalyserException extends Exception{
+public class CricketAnalyserException extends Exception {
 
     public ExceptionType type;
 
     public enum ExceptionType {
-        CENSUS_FILE_PROBLEM,INCORRECT_FILE_DATA,FILE_NOT_FOUND
+        CENSUS_FILE_PROBLEM, INCORRECT_FILE_DATA, FILE_NOT_FOUND, NO_CRICKET_DATA
     }
 
     public CricketAnalyserException(String message, ExceptionType type) {

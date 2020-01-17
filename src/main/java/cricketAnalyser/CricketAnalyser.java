@@ -10,6 +10,7 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,27 +36,47 @@ public class CricketAnalyser {
         return 0;
     }
 
-    public List getSoringBattingAverage() {
-
+    public List getSoringBattingAverage() throws CricketAnalyserException {
+        if ((batsmanList == null) || (batsmanList.size() == 0)) {
+            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
+        }
         batsmanList = batsmanList.stream()
                 .sorted((data1, data2) -> data1.avarage - data2.avarage > 0 ? -1 : 1)
                 .collect(Collectors.toList());
         return batsmanList;
     }
 
-    public List getSoringStrikeRate() {
-
+    public List getSoringStrikeRate() throws CricketAnalyserException {
+        if ((batsmanList == null) || (batsmanList.size() == 0)) {
+            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
+        }
         batsmanList = batsmanList.stream()
                 .sorted((data1, data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1)
                 .collect(Collectors.toList());
         return batsmanList;
     }
 
-    public List getMostSixAndFor() {
+    public List getMostSixAndFour() throws CricketAnalyserException {
+        if ((batsmanList == null) || (batsmanList.size() == 0)) {
+            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
+        }
         batsmanList = batsmanList.stream()
-                .sorted((data1, data2) -> (data2.sixs * 6 + data2.sixs * 4) - (data1.sixs * 6 + data1.sixs * 4))
+                .sorted((data1, data2) -> (data2.sixs * 6 + data2.fours * 4) - (data1.sixs * 6 + data1.fours * 4))
                 .collect(Collectors.toList());
         return batsmanList;
     }
 
+
+    public List getBestStrikeRateSixAndFour() throws CricketAnalyserException {
+        if ((batsmanList == null) || (batsmanList.size() == 0)) {
+            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
+        }
+        Comparator<Batsman> comparator = ((data1, data2) -> (data2.sixs * 6 + data2.fours * 4) - (data1.sixs * 6 + data1.fours * 4));
+        comparator = comparator.thenComparing((data1, data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1);
+        batsmanList = batsmanList.stream()
+                .sorted(comparator)
+                .collect(Collectors.toList());
+        System.out.println(batsmanList);
+        return batsmanList;
+    }
 }
