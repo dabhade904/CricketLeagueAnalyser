@@ -22,15 +22,16 @@ public class CricketAnalyser {
             batsmanList = icsvBuilder.getCSVFileList(reader, Batsman.class);
             return batsmanList.size();
 
+
+        } catch (IOException e) {
+            throw new CricketAnalyserException(e.getMessage(),
+                    CricketAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
         } catch (CSVBuilderException e) {
             e.printStackTrace();
         } catch (RuntimeException e) {
             throw new CricketAnalyserException(e.getMessage(),
                     CricketAnalyserException.ExceptionType.FILE_NOT_FOUND);
-        } catch (IOException e) {
-            throw new CricketAnalyserException(e.getMessage(),
-                    CricketAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
-    }
+        }
         return 0;
     }
 
@@ -49,4 +50,12 @@ public class CricketAnalyser {
                 .collect(Collectors.toList());
         return batsmanList;
     }
+
+    public List getMostSixAndFor() {
+        batsmanList = batsmanList.stream()
+                .sorted((data1, data2) -> (data2.sixs * 6 + data2.sixs * 4) - (data1.sixs * 6 + data1.sixs * 4))
+                .collect(Collectors.toList());
+        return batsmanList;
+    }
+
 }
