@@ -1,7 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CricketAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-17T11:22:20" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.405">
+<testsuite name="CricketAnalyserTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2020-01-17T11:48:35" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.544">
   <properties/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnLowestBattingAverage" classname="CricketAnalyserTest" time="0.405"/>
+  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnLowestBattingAverage" classname="CricketAnalyserTest" time="0.465"/>
+  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnLowestStrikeRate" classname="CricketAnalyserTest" time="0.15"/>
+  <testcase name="givenIndiaCSVFile_whenCorrectButTypeIncorrect_ShouldReturnCustomException" classname="CricketAnalyserTest" time="0.02"/>
+  <testcase name="givenLeagueDataCSVFIle_shouldReturnExactCount" classname="CricketAnalyserTest" time="0.198"/>
+  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHigestStrikeRate" classname="CricketAnalyserTest" time="0.111"/>
+  <testcase name="givenLeagueData_withWrongFile_shouldThrowException" classname="CricketAnalyserTest" time="0.159"/>
+  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnData" classname="CricketAnalyserTest" time="0.194"/>
+  <testcase name="whenGivenCSVFileCorrect_butDelimiterIncorrect_shouldReturnCustomException" classname="CricketAnalyserTest" time="0.096"/>
+  <testcase name="whenGivenCSVFileCorrect_butCSVHeaderIncorrect_shouldReturnCustomException" classname="CricketAnalyserTest" time="0.01"/>
+  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnHighestBattingAverage" classname="CricketAnalyserTest" time="0.137"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[cricketAnalyser.CricketAnalyserException: Error capturing CSV header!
+	at cricketAnalyser.CricketAnalyser.readCricketMostRunsData(CricketAnalyser.java:28)
+	at CricketAnalyserTest.givenIndiaCSVFile_whenCorrectButTypeIncorrect_ShouldReturnCustomException(CricketAnalyserTest.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "pool-7-thread-3" java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: The following required fields were not present for one record of the input: sixs
+	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:91)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.opencsv.exceptions.CsvRequiredFieldEmptyException: The following required fields were not present for one record of the input: sixs
+	at com.opencsv.bean.HeaderColumnNameMappingStrategy.verifyLineLength(HeaderColumnNameMappingStrategy.java:148)
+	at com.opencsv.bean.concurrent.ProcessCsvLine.processLine(ProcessCsvLine.java:122)
+	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:82)
+	... 3 more
+]]></system-err>
 </testsuite>

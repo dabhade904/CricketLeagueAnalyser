@@ -41,4 +41,12 @@ public class CricketAnalyser {
                 .collect(Collectors.toList());
         return batsmanList;
     }
+
+    public List getSoringStrikeRate() {
+
+        batsmanList = batsmanList.stream()
+                .sorted((data1, data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1)
+                .collect(Collectors.toList());
+        return batsmanList;
+    }
 }
