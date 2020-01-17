@@ -4,6 +4,7 @@ import cessusanalyser.CSVBuilderException;
 import cessusanalyser.CSVBuilderFactory;
 import cessusanalyser.ICSVBuilder;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -15,16 +16,21 @@ import java.util.stream.Collectors;
 public class CricketAnalyser {
     List<Batsman> batsmanList = new ArrayList<>();
 
-    public int readCricketMostRunsData(String csvFilePath) {
+    public int readCricketMostRunsData(String csvFilePath) throws CricketAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
             batsmanList = icsvBuilder.getCSVFileList(reader, Batsman.class);
             return batsmanList.size();
+
         } catch (CSVBuilderException e) {
             e.printStackTrace();
+        } catch (RuntimeException e) {
+            throw new CricketAnalyserException(e.getMessage(),
+                    CricketAnalyserException.ExceptionType.FILE_NOT_FOUND);
         } catch (IOException e) {
-            e.printStackTrace();
-        }
+            throw new CricketAnalyserException(e.getMessage(),
+                    CricketAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM);
+    }
         return 0;
     }
 
