@@ -1,9 +1,10 @@
 package cricketAnalyser;
+
 import com.opencsv.bean.CsvBindByName;
 
 public class Batsman {
 
-    @CsvBindByName(column = "POS",required = true)
+    @CsvBindByName(column = "POS", required = true)
     public int pos;
 
     @CsvBindByName(column = "PLAYER", required = true)
@@ -16,7 +17,7 @@ public class Batsman {
     public int innings;
 
     @CsvBindByName(column = "NO", required = true)
-    public  int noPlay;
+    public int noPlay;
 
     @CsvBindByName(column = "Runs", required = true)
     public int runs;
@@ -25,7 +26,7 @@ public class Batsman {
     public String highScore;
 
     @CsvBindByName(column = "Avg", required = true)
-    public String avarage;
+    public double avarage;
 
     @CsvBindByName(column = "BF", required = true)
     public int ballsFaced;
