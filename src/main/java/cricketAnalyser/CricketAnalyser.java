@@ -10,6 +10,7 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -76,6 +77,18 @@ public class CricketAnalyser {
         batsmanList = batsmanList.stream()
                 .sorted(comparator)
                 .collect(Collectors.toList());
+        System.out.println(batsmanList);
+        return batsmanList;
+    }
+
+    public List getAverageWithBestStrikeRate() throws CricketAnalyserException {
+        if ((batsmanList == null) || (batsmanList.size() == 0)) {
+            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
+        }
+        Comparator<Batsman> comparator = ((data1, data2) -> (int) ((data1.avarage) - (data2.avarage)));
+        comparator = comparator.thenComparing((data1, data2) -> data1.strikeRate - data2.strikeRate < 0 ? -1 : 1);
+        Collections.sort(batsmanList, comparator);
+        Collections.reverse(batsmanList);
         System.out.println(batsmanList);
         return batsmanList;
     }

@@ -188,5 +188,29 @@ public class CricketAnalyserTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestAverage() {
+        try {
+            CricketAnalyser cricketAnalyse = new CricketAnalyser();
+            cricketAnalyse.readCricketMostRunsData(IPL2019_RUNS_CSV_FILE_PATH);
+            List<Batsman> sortedData = cricketAnalyse.getAverageWithBestStrikeRate();
+            Assert.assertEquals("MS Dhoni", sortedData.get(0).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnLowestAverage() {
+        try {
+            CricketAnalyser cricketAnalyse = new CricketAnalyser();
+            cricketAnalyse.readCricketMostRunsData(IPL2019_RUNS_CSV_FILE_PATH);
+            List<Batsman> sortedData = cricketAnalyse.getAverageWithBestStrikeRate();
+            Assert.assertEquals("Tim Southee", sortedData.get(99).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

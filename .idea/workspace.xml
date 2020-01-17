@@ -18,7 +18,6 @@
       <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/test/resources/IndiaStateCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/test/resources/IndiaStateCode.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,11 +51,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+            <state relative-caret-position="247">
+              <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="141">
+              <caret line="210" column="46" selection-start-line="210" selection-start-column="46" selection-end-line="210" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -121,12 +120,18 @@
         <option value="$PROJECT_DIR$/src/test/resources/WrongFileType.txt" />
         <option value="$PROJECT_DIR$/src/test/resources/wrongFileHeader.csv" />
         <option value="$PROJECT_DIR$/src/test/resources/wrongFileDelimiter.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java" />
         <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostRuns.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java" />
         <option value="$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
@@ -301,12 +306,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate&quot;" />
+        <option name="scriptParameters" value="--tests &quot;CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -321,12 +326,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate&quot;" />
+        <option name="scriptParameters" value="--tests &quot;CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -344,10 +349,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CricketAnalyserTest" />
+        <item itemvalue="Gradle.CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt" />
+        <item itemvalue="Gradle.CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFour" />
         <item itemvalue="Gradle.CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd" />
-        <item itemvalue="Gradle.CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate" />
-        <item itemvalue="Gradle.CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" />
       </list>
     </recent_temporary>
   </component>
@@ -365,35 +370,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate - 2020.01.17 at 19h 01m 26s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest - 2020.01.17 at 19h 08m 13s.xml">
+      <configuration name="CricketAnalyserTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate - 2020.01.17 at 19h 02m 34s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat - 2020.01.17 at 19h 30m 35s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate - 2020.01.17 at 19h 02m 53s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat - 2020.01.17 at 19h 32m 01s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate - 2020.01.17 at 19h 03m 05s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat - 2020.01.17 at 19h 33m 18s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate - 2020.01.17 at 19h 03m 32s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat - 2020.01.17 at 19h 34m 14s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate - 2020.01.17 at 19h 03m 39s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat - 2020.01.17 at 19h 34m 34s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd - 2020.01.17 at 19h 03m 52s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat - 2020.01.17 at 19h 39m 28s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRat" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd - 2020.01.17 at 19h 04m 28s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt - 2020.01.17 at 19h 40m 18s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFour - 2020.01.17 at 19h 04m 36s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFour" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt - 2020.01.17 at 19h 40m 36s.xml">
+      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRt" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="CricketAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFour - 2020.01.17 at 19h 04m 37s.xml">
-      <configuration name="CricketAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFour" configurationId="GradleRunConfiguration" />
+    <history-entry file="CricketAnalyserTest - 2020.01.17 at 19h 43m 56s.xml">
+      <configuration name="CricketAnalyserTest" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -414,7 +419,7 @@
       <window_info anchor="bottom" id="Build" weight="0.3306189" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.48859936" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39250815" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,7 +427,7 @@
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Gradle" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Maven" weight="0.32960895" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -587,10 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="141">
+          <caret line="210" column="46" selection-start-line="210" selection-start-column="46" selection-end-line="210" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -604,10 +609,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="247">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
