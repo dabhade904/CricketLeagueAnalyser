@@ -20,7 +20,6 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyser = new CricketAnalyser();
         int loadData =cricketAnalyser.getNumberOfRecord(IPL2019_RUNS_CSV_FILE_PATH);
         Assert.assertEquals(100, loadData);
-
     }
 
     @Test
@@ -214,6 +213,32 @@ public class CricketAnalyserTest {
             String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
             Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
             Assert.assertEquals("Harpreet Brar",batsmen[99].player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenLeagueDataCSVFile_whenSortedOnRuns_shouldReturnHighestAverage() {
+        try {
+            CricketAnalyser cricketAnalyse = new CricketAnalyser();
+            cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("David Warner ",batsmen[0].player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void givenLeagueDataCSVFile_whenSortedOnRuns_shouldReturnLowestAverage() {
+        try {
+            CricketAnalyser cricketAnalyse = new CricketAnalyser();
+            cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("Shakib Al Hasan",batsmen[99].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }

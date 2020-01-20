@@ -7,7 +7,7 @@ import java.util.Map;
 public class SortingFields {
     public static Map<fields,Comparator> sortByFields=new HashMap<>();
     public enum fields {
-        AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS
+        AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS,RUNSWITHAVERAGE,
     }
     public Comparator<Batsman> getParameter(SortingFields.fields parameter) {
         Comparator<Batsman> batsmanComparator = Comparator.comparing(batsmanRun -> batsmanRun.avarage, Comparator.reverseOrder());
@@ -20,6 +20,8 @@ public class SortingFields {
         sortByFields.put(fields.STRIKE_WITH_BOUNDARY,strikeRateWithBoundaryComparator);
         Comparator<Batsman>runsComparator=Comparator.comparing(batsman -> batsman.avarage,Comparator.reverseOrder());
         sortByFields.put(fields.RUNS,runsComparator);
+        Comparator<Batsman>avgComparator=Comparator.comparing(batsman -> batsman.runs,Comparator.reverseOrder());
+        sortByFields.put(fields.RUNSWITHAVERAGE,avgComparator);
         Comparator<Batsman>comparator=sortByFields.get(parameter);
         return comparator;
     }
