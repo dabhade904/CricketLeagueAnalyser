@@ -1,11 +1,11 @@
+import com.google.gson.Gson;
 import cricketAnalyser.Batsman;
 import cricketAnalyser.CricketAnalyser;
 import cricketAnalyser.CricketAnalyserException;
+import cricketAnalyser.SortingFields;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
-import java.util.List;
 
 public class CricketAnalyserTest {
 
@@ -18,13 +18,9 @@ public class CricketAnalyserTest {
     @Test
     public void givenLeagueDataCSVFIle_shouldReturnExactCount() {
         CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        try {
-            int loadData = loadData = cricketAnalyser.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            Assert.assertEquals(100, loadData);
+        int loadData =cricketAnalyser.getNumberOfRecord(IPL2019_RUNS_CSV_FILE_PATH);
+        Assert.assertEquals(100, loadData);
 
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
@@ -32,13 +28,12 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getSoringBattingAverage();
-            Assert.assertTrue(sortedData.get(0).toString().contains("MS Dhoni"));
-
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("MS Dhoni",batsmen[0].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
-
     }
 
     @Test
@@ -46,8 +41,11 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getSoringBattingAverage();
-            Assert.assertEquals(83.2, sortedData.get(0).avarage, 0);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            System.out.println(sortedData);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals(83.2,batsmen[0].avarage,0);
+
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -58,12 +56,12 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getSoringBattingAverage();
-            Assert.assertEquals(0.0, sortedData.get(99).avarage, 0);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals(0.0,batsmen[99].avarage,0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
-
     }
 
     @Test
@@ -74,7 +72,7 @@ public class CricketAnalyserTest {
             exceptionRule.expect(CricketAnalyserException.class);
             censusAnalyser.loadCricketData(WRONG_CSV_FILE_PATH);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.CENSUS_FILE_PROBLEM, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.CRICKET_FILE_PROBLEM, e.type);
         }
     }
 
@@ -100,7 +98,7 @@ public class CricketAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(WRONG_CSV_FILE_PATH_DELIMITER);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.FILE_NOT_FOUND, e.type);
+             Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
         }
     }
 
@@ -112,17 +110,18 @@ public class CricketAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(WRONG_CSV_FILE_PATH_HEADER);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.FILE_NOT_FOUND, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
         }
     }
 
     @Test
-    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHigestStrikeRate() {
+    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate() {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getSoringStrikeRate();
-            Assert.assertEquals(333.33, sortedData.get(0).strikeRate, 0);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals(333.33,batsmen[0].strikeRate,0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -133,8 +132,9 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getSoringStrikeRate();
-            Assert.assertEquals(63.15, sortedData.get(99).strikeRate, 0);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals(63.15,batsmen[99].strikeRate,0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -145,9 +145,10 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getMostSixAndFour();
-            System.out.println(sortedData);
-            Assert.assertEquals("Andre Russell", sortedData.get(0).player);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+              System.out.println(sortedData);
+            Assert.assertEquals("Andre Russell",batsmen[0].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -158,8 +159,9 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getMostSixAndFour();
-            Assert.assertEquals("Tim Southee", sortedData.get(99).player);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("Shakib Al Hasan",batsmen[99].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -170,8 +172,9 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getBestStrikeRateSixAndFour();
-            Assert.assertEquals("Andre Russell", sortedData.get(0).player);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("Andre Russell",batsmen[0].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -182,8 +185,9 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getBestStrikeRateSixAndFour();
-            Assert.assertEquals("Shakib Al Hasan", sortedData.get(99).player);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("Shakib Al Hasan", batsmen[99].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -194,8 +198,9 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getAverageWithBestStrikeRate();
-            Assert.assertEquals("MS Dhoni", sortedData.get(0).player);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("MS Dhoni",batsmen[0].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -206,8 +211,9 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyse.getAverageWithBestStrikeRate();
-            Assert.assertEquals("Tim Southee", sortedData.get(99).player);
+            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
+            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
+            Assert.assertEquals("Harpreet Brar",batsmen[99].player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }

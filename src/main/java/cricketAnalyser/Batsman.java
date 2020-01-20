@@ -17,7 +17,7 @@ public class Batsman {
     public int innings;
 
     @CsvBindByName(column = "NO", required = true)
-    public int noPlay;
+    public int notOut;
 
     @CsvBindByName(column = "Runs", required = true)
     public int runs;
@@ -53,7 +53,7 @@ public class Batsman {
                 ", player='" + player + '\'' +
                 ", matches=" + matches +
                 ", innings=" + innings +
-                ", noPlay=" + noPlay +
+                ", noPlay=" + notOut +
                 ", runs=" + runs +
                 ", highScore='" + highScore + '\'' +
                 ", avarage='" + avarage + '\'' +

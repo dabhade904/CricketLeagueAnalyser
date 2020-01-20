@@ -1,83 +1,34 @@
 package cricketAnalyser;
 
-import cessusanalyser.CSVBuilderException;
-import cessusanalyser.CSVBuilderFactory;
-import cessusanalyser.ICSVBuilder;
+import com.google.gson.Gson;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CricketAnalyser {
-    List<Batsman> batsmanList = new ArrayList();
+    Map<String, Batsman> batsmanMap = new HashMap<>();
 
-
-    public int loadCricketData(String csvFilePath) throws CricketAnalyserException {
-        batsmanList=new CricketLeagueLoader().readCricketMostRunsData(csvFilePath);
-        return batsmanList.size();
+    public Map<String, Batsman> loadCricketData(String csvFilePath) throws CricketAnalyserException {
+        batsmanMap = new CricketLeagueLoader().readCricketMostRunsData(csvFilePath);
+        return batsmanMap;
     }
 
-
-    public List getSoringBattingAverage() throws CricketAnalyserException {
-        if ((batsmanList == null) || (batsmanList.size() == 0)) {
-            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
+    public int getNumberOfRecord(String csvFilePath) {
+        int count = 0;
+        try {
+            Map<String, Batsman> batsmanMap1 = loadCricketData(csvFilePath);
+            return count=batsmanMap1.size();
+        } catch (CricketAnalyserException e) {
         }
-        batsmanList = batsmanList.stream()
-                .sorted((data1, data2) -> data1.avarage - data2.avarage > 0 ? -1 : 1)
-                .collect(Collectors.toList());
-        return batsmanList;
+        return count;
     }
 
-    public List getSoringStrikeRate() throws CricketAnalyserException {
-        if ((batsmanList == null) || (batsmanList.size() == 0)) {
-            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
-        }
-        batsmanList = batsmanList.stream()
-                .sorted((data1, data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1)
-                .collect(Collectors.toList());
-        return batsmanList;
-    }
-
-    public List getMostSixAndFour() throws CricketAnalyserException {
-        if ((batsmanList == null) || (batsmanList.size() == 0)) {
-            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
-        }
-        batsmanList = batsmanList.stream()
-                .sorted((data1, data2) -> (data2.sixs * 6 + data2.fours * 4) - (data1.sixs * 6 + data1.fours * 4))
-                .collect(Collectors.toList());
-        return batsmanList;
-    }
-
-
-    public List getBestStrikeRateSixAndFour() throws CricketAnalyserException {
-        if ((batsmanList == null) || (batsmanList.size() == 0)) {
-            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
-        }
-        Comparator<Batsman> comparator = ((data1, data2) -> (data2.sixs * 6 + data2.fours * 4) - (data1.sixs * 6 + data1.fours * 4));
-        comparator = comparator.thenComparing((data1, data2) -> data1.strikeRate - data2.strikeRate > 0 ? -1 : 1);
-        batsmanList = batsmanList.stream()
-                .sorted(comparator)
-                .collect(Collectors.toList());
-        System.out.println(batsmanList);
-        return batsmanList;
-    }
-
-    public List getAverageWithBestStrikeRate() throws CricketAnalyserException {
-        if ((batsmanList == null) || (batsmanList.size() == 0)) {
-            throw new CricketAnalyserException("No Cricket data", CricketAnalyserException.ExceptionType.NO_CRICKET_DATA);
-        }
-        Comparator<Batsman> comparator = ((data1, data2) -> (int) ((data1.avarage) - (data2.avarage)));
-        comparator = comparator.thenComparing((data1, data2) -> data1.strikeRate - data2.strikeRate < 0 ? -1 : 1);
-        Collections.sort(batsmanList, comparator);
-        Collections.reverse(batsmanList);
-        System.out.println(batsmanList);
-        return batsmanList;
+    public String getSortedData(SortingFields.fields sortFields) {
+        Comparator<Batsman> batsmanComparator = new SortingFields().getParameter(sortFields);
+        ArrayList batsmanList = batsmanMap.values().stream().
+                sorted(batsmanComparator).
+                collect(Collectors.toCollection(ArrayList::new));
+        String sortedDataJson = new Gson().toJson(batsmanList);
+        return sortedDataJson;
     }
 }
