@@ -12,13 +12,14 @@ import java.util.*;
 import java.util.stream.StreamSupport;
 
 public class CricketLeagueLoader {
-    Map<String,Batsman> batsmanMap = new HashMap();
+    Map<String,Batsman> batsmanMap = new HashMap<>();
+    Map<String, Bowler> bowlerMap = new HashMap<>();
 
     public  Map<String,Batsman> readCricketMostRunsData(String csvFilePath) throws CricketAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
-            Iterator<Batsman>batsmanIterator=icsvBuilder.getCSVFileIterator(reader,Batsman.class);
-            Iterable<Batsman>batsmanIterable=() -> batsmanIterator;
+            Iterator batsmanIterator = icsvBuilder.getCSVFileIterator(reader,Batsman.class);
+            Iterable<Batsman> batsmanIterable= () -> batsmanIterator;
             StreamSupport.stream(batsmanIterable.spliterator(),false).map(Batsman.class::cast).forEach(batsmanRuns ->batsmanMap.put(batsmanRuns.player,batsmanRuns));
             return batsmanMap;
         } catch (IOException e) {
@@ -32,4 +33,21 @@ public class CricketLeagueLoader {
         }
     }
 
+    public  Map<String,Bowler> readCricketMostWicketsData(String csvFilePath) throws CricketAnalyserException {
+        try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
+            ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
+            Iterator<Bowler> bowlerIterator=icsvBuilder.getCSVFileIterator(reader,Bowler.class);
+            Iterable<Bowler> bowlerIterable=() -> bowlerIterator;
+            StreamSupport.stream(bowlerIterable.spliterator(),false).map(Bowler.class::cast).forEach(bowlerWickets ->bowlerMap.put(bowlerWickets.player,bowlerWickets));
+            return bowlerMap;
+        } catch (IOException e) {
+            throw new CricketAnalyserException(e.getMessage(),
+                    CricketAnalyserException.ExceptionType.CRICKET_FILE_PROBLEM);
+        } catch (CSVBuilderException e) {
+            throw new CricketAnalyserException(e.getMessage(),CricketAnalyserException.ExceptionType.UNABLE_TO_PARSE);
+        } catch (RuntimeException e) {
+            throw new CricketAnalyserException(e.getMessage(),
+                    CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM);
+        }
+    }
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 public class SortingFields {
     public static Map<fields,Comparator> sortByFields=new HashMap<>();
     public enum fields {
-        AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS,RUNSWITHAVERAGE,
+        AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS,RUNSWITHAVERAGE,BOWLERAVERAGE,
     }
     public Comparator<Batsman> getParameter(SortingFields.fields parameter) {
         Comparator<Batsman> batsmanComparator = Comparator.comparing(batsmanRun -> batsmanRun.avarage, Comparator.reverseOrder());
@@ -22,8 +22,19 @@ public class SortingFields {
         sortByFields.put(fields.RUNS,runsComparator);
         Comparator<Batsman>avgComparator=Comparator.comparing(batsman -> batsman.runs,Comparator.reverseOrder());
         sortByFields.put(fields.RUNSWITHAVERAGE,avgComparator);
+
+        Comparator<Bowler>averageComparator=Comparator.comparing(bowlerAverage ->bowlerAverage.average,Comparator.reverseOrder());
+        sortByFields.put(fields.BOWLERAVERAGE,averageComparator);
+
         Comparator<Batsman>comparator=sortByFields.get(parameter);
+
         return comparator;
     }
 
+    public Comparator<Bowler> getParameters(SortingFields.fields parameter) {
+        Comparator<Bowler>averageComparator=Comparator.comparing(bowlerAverage ->bowlerAverage.average,Comparator.reverseOrder());
+        sortByFields.put(fields.BOWLERAVERAGE,averageComparator);
+        Comparator<Bowler>comparator=sortByFields.get(parameter);
+        return comparator;
+    }
 }

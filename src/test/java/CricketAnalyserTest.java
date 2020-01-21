@@ -1,11 +1,12 @@
 import com.google.gson.Gson;
-import cricketAnalyser.Batsman;
-import cricketAnalyser.CricketAnalyser;
-import cricketAnalyser.CricketAnalyserException;
-import cricketAnalyser.SortingFields;
+import com.opencsv.bean.CsvBindByName;
+import cricketAnalyser.*;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import java.util.List;
+import java.util.Map;
 
 public class CricketAnalyserTest {
 
@@ -18,10 +19,11 @@ public class CricketAnalyserTest {
     private static final String IPL2019_WICKETS_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/IPL2019FactSheeMostWickets.csv";
 
     @Test
-    public void givenLeagueDataCSVFIle_shouldReturnExactCount() {
+    public void givenLeagueDataCSVFIle_shouldReturnExactCount() throws CricketAnalyserException {
         CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        int loadData =cricketAnalyser.getNumberOfRecord(IPL2019_RUNS_CSV_FILE_PATH);
+        int loadData =cricketAnalyser.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
         Assert.assertEquals(100, loadData);
+
     }
 
     @Test
@@ -73,7 +75,7 @@ public class CricketAnalyserTest {
             exceptionRule.expect(CricketAnalyserException.class);
             censusAnalyser.loadCricketData(WRONG_CSV_FILE_PATH);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.CRICKET_FILE_PROBLEM, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
         }
     }
 
@@ -246,15 +248,22 @@ public class CricketAnalyserTest {
         }
     }
 
+    @Test
+    public void whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount() throws CricketAnalyserException {
+     CricketAnalyser cricketAnalyser = new CricketAnalyser();
+        int loadData =cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
+        Assert.assertEquals(99, loadData);
+    }
 
     @Test
-    public void whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount() {
-        CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        int loadData = 0;
+    public void whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage(){
+        CricketAnalyser cricketAnalyser=new CricketAnalyser();
         try {
-            loadData = cricketAnalyser.readCricketMostWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
-            Assert.assertEquals(99, loadData);
-
+            cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
+            String sortedData=cricketAnalyser.getSortedWicketsData(SortingFields.fields.BOWLERAVERAGE);
+            Bowler[]bowlers=new Gson().fromJson(sortedData,Bowler[].class);
+            Assert.assertEquals(166.0,bowlers[0].average,0);
+            Assert.assertEquals(0.0,bowlers[98].average,0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }

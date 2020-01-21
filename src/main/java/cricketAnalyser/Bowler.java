@@ -29,7 +29,7 @@ public class Bowler {
     public String bestBowlingIndex;
 
     @CsvBindByName(column = "Avg", required = true)
-    public String average;
+    public double average;
 
     @CsvBindByName(column = "Econ", required = true)
     public String economi;

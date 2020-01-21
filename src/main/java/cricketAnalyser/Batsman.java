@@ -46,6 +46,7 @@ public class Batsman {
     @CsvBindByName(column = "6s", required = true)
     public int sixs;
 
+
     @Override
     public String toString() {
         return "Batsman{" +
