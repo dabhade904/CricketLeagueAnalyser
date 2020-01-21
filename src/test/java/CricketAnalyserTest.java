@@ -15,6 +15,8 @@ public class CricketAnalyserTest {
     private static final String WRONG_CSV_FILE_PATH_DELIMITER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileDelimiter.csv";
     private static final String WRONG_CSV_FILE_PATH_HEADER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileHeader.csv";
 
+    private static final String IPL2019_WICKETS_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/IPL2019FactSheeMostWickets.csv";
+
     @Test
     public void givenLeagueDataCSVFIle_shouldReturnExactCount() {
         CricketAnalyser cricketAnalyser = new CricketAnalyser();
@@ -239,6 +241,20 @@ public class CricketAnalyserTest {
             String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
             Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
             Assert.assertEquals("Shakib Al Hasan",batsmen[99].player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Test
+    public void whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount() {
+        CricketAnalyser cricketAnalyser = new CricketAnalyser();
+        int loadData = 0;
+        try {
+            loadData = cricketAnalyser.readCricketMostWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
+            Assert.assertEquals(99, loadData);
+
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
