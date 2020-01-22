@@ -236,7 +236,19 @@ public class CricketAnalyserTest {
         int loadData = cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
         Assert.assertEquals(99, loadData);
     }
+
+    @Test
+    public void whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage(){
+        CricketAnalyser cricketAnalyser=new CricketAnalyser();
+        try {
+            cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
+            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERAVERAGE);
+            System.out.println(sortedData);
+            Assert.assertEquals(0.0,sortedData.get(0).average,0);
+            Assert.assertEquals(0.0,sortedData.get(98).average,0);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
-
-
-
