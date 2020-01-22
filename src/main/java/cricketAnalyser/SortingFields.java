@@ -7,7 +7,7 @@ import java.util.Map;
 public class SortingFields {
     public static Map<fields,Comparator> sortByFields=new HashMap<>();
     public enum fields {
-        AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS,RUNSWITHAVERAGE,BOWLERAVERAGE,
+        AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS,RUNSWITHAVERAGE,BOWLERAVERAGE,BOWLERSTRIKERATE,
     }
     public Comparator<CricketLeagueDao> getParameter(fields parameter) {
         Comparator<CricketLeagueDao> batsmanComparator = Comparator.comparing(batsmanRun -> batsmanRun.average);
@@ -24,7 +24,8 @@ public class SortingFields {
         sortByFields.put(fields.RUNSWITHAVERAGE,avgComparator);
         Comparator<CricketLeagueDao>bowlerAverage=Comparator.comparing(bowler-> bowler.average);
         sortByFields.put(fields.BOWLERAVERAGE,bowlerAverage);
-
+        Comparator<CricketLeagueDao>bowlerStrikeRate=Comparator.comparing(bowler ->bowler.strikeRate);
+        sortByFields.put(fields.BOWLERSTRIKERATE,bowlerStrikeRate);
         Comparator<CricketLeagueDao>comparator=sortByFields.get(parameter);
         return comparator;
     }

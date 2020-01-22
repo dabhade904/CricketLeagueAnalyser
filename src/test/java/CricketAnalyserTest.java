@@ -251,4 +251,17 @@ public class CricketAnalyserTest {
         }
     }
 
+    @Test
+    public  void whenGivenBowlerCSV_whenSortOnStrikeRate_shouldReturnTopStrikeRate(){
+        CricketAnalyser cricketAnalyser=new CricketAnalyser();
+        try {
+            cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
+            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERSTRIKERATE);
+            System.out.println(sortedData);
+            Assert.assertEquals(120.0,sortedData.get(0).strikeRate,0);
+            Assert.assertEquals(0.0,sortedData.get(98).strikeRate,0);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
