@@ -9,32 +9,23 @@ public class SortingFields {
     public enum fields {
         AVERAGE,STRIKERATE,BOUNDARIES,STRIKE_WITH_BOUNDARY,RUNS,RUNSWITHAVERAGE,BOWLERAVERAGE,
     }
-    public Comparator<Batsman> getParameter(SortingFields.fields parameter) {
-        Comparator<Batsman> batsmanComparator = Comparator.comparing(batsmanRun -> batsmanRun.avarage, Comparator.reverseOrder());
+    public Comparator<CricketLeagueDao> getParameter(fields parameter) {
+        Comparator<CricketLeagueDao> batsmanComparator = Comparator.comparing(batsmanRun -> batsmanRun.average);
         sortByFields.put(fields.AVERAGE,batsmanComparator);
-        Comparator<Batsman>strikeComparator=Comparator.comparing(batsmanStrike ->batsmanStrike.strikeRate,Comparator.reverseOrder());
+        Comparator<CricketLeagueDao>strikeComparator=Comparator.comparing(batsmanStrike ->batsmanStrike.strikeRate);
         sortByFields.put(fields.STRIKERATE,strikeComparator);
-        Comparator<Batsman> boundariesComparator = Comparator.comparing(batsman -> batsman.fours*4+batsman.sixs*6,Comparator.reverseOrder());
+        Comparator<CricketLeagueDao> boundariesComparator = Comparator.comparing(batsman -> batsman.fours*4+batsman.sixes*6);
         sortByFields.put(fields.BOUNDARIES,boundariesComparator);
-        Comparator<Batsman>strikeRateWithBoundaryComparator=Comparator.comparing(batsman -> (batsman.fours*4+batsman.sixs*6),Comparator.reverseOrder());
+        Comparator<CricketLeagueDao>strikeRateWithBoundaryComparator=Comparator.comparing(batsman -> (batsman.fours*4+batsman.sixes*6));
         sortByFields.put(fields.STRIKE_WITH_BOUNDARY,strikeRateWithBoundaryComparator);
-        Comparator<Batsman>runsComparator=Comparator.comparing(batsman -> batsman.avarage,Comparator.reverseOrder());
+        Comparator<CricketLeagueDao>runsComparator=Comparator.comparing(batsman -> batsman.average);
         sortByFields.put(fields.RUNS,runsComparator);
-        Comparator<Batsman>avgComparator=Comparator.comparing(batsman -> batsman.runs,Comparator.reverseOrder());
+        Comparator<CricketLeagueDao>avgComparator=Comparator.comparing(batsman -> batsman.runs);
         sortByFields.put(fields.RUNSWITHAVERAGE,avgComparator);
+        Comparator<CricketLeagueDao>bowlerAverage=Comparator.comparing(bowler-> bowler.average);
+        sortByFields.put(fields.BOWLERAVERAGE,bowlerAverage);
 
-        Comparator<Bowler>averageComparator=Comparator.comparing(bowlerAverage ->bowlerAverage.average,Comparator.reverseOrder());
-        sortByFields.put(fields.BOWLERAVERAGE,averageComparator);
-
-        Comparator<Batsman>comparator=sortByFields.get(parameter);
-
-        return comparator;
-    }
-
-    public Comparator<Bowler> getParameters(SortingFields.fields parameter) {
-        Comparator<Bowler>averageComparator=Comparator.comparing(bowlerAverage ->bowlerAverage.average,Comparator.reverseOrder());
-        sortByFields.put(fields.BOWLERAVERAGE,averageComparator);
-        Comparator<Bowler>comparator=sortByFields.get(parameter);
+        Comparator<CricketLeagueDao>comparator=sortByFields.get(parameter);
         return comparator;
     }
 }

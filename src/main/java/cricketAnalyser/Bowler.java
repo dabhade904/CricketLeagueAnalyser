@@ -5,43 +5,62 @@ import com.opencsv.bean.CsvBindByName;
 public class Bowler {
 
     @CsvBindByName(column = "POS", required = true)
-    public String pos;
+    public int pos;
 
     @CsvBindByName(column = "PLAYER", required = true)
     public String player;
 
     @CsvBindByName(column = "Mat", required = true)
-    public String matches;
+    public int matches;
 
     @CsvBindByName(column = "Inns", required = true)
-    public String innings;
+    public int innings;
 
     @CsvBindByName(column = "Ov", required = true)
-    public String overs;
+    public double overs;
 
     @CsvBindByName(column = "Runs", required = true)
-    public String runs;
+    public int runs;
 
     @CsvBindByName(column = "Wkts", required = true)
-    public String wikets;
+    public int wikets;
 
     @CsvBindByName(column = "BBI", required = true)
-    public String bestBowlingIndex;
+    public int bestBowlingIndex;
 
     @CsvBindByName(column = "Avg", required = true)
     public double average;
 
     @CsvBindByName(column = "Econ", required = true)
-    public String economi;
+    public double economi;
 
     @CsvBindByName(column = "SR", required = true)
-    public String strikeRate;
+    public double strikeRate;
 
     @CsvBindByName(column = "4w", required = true)
-    public String foursWickets;
+    public int foursWickets;
 
     @CsvBindByName(column = "5w", required = true)
-    public String fiveWickets;
+    public int fiveWickets;
+
+    public Bowler(int pos, String player, int matches, int innings, double overs, int runs, int wikets, int bestBowlingIndex, double average, double economi, double strikeRate, int foursWickets, int fiveWickets) {
+        this.pos = pos;
+        this.player = player;
+        this.matches = matches;
+        this.innings = innings;
+        this.overs = overs;
+        this.runs = runs;
+        this.wikets = wikets;
+        this.bestBowlingIndex = bestBowlingIndex;
+        this.average = average;
+        this.economi = economi;
+        this.strikeRate = strikeRate;
+        this.foursWickets = foursWickets;
+        this.fiveWickets = fiveWickets;
+    }
+
+    public Bowler() {
+    }
 
     @Override
     public String toString() {

@@ -9,19 +9,20 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 public class CricketLeagueLoader {
-    Map<String,Batsman> batsmanMap = new HashMap<>();
-    Map<String, Bowler> bowlerMap = new HashMap<>();
+    List<CricketLeagueDao> cricketList = new ArrayList();
 
-    public  Map<String,Batsman> readCricketMostRunsData(String csvFilePath) throws CricketAnalyserException {
+    public <E> List readCricketMostRunsData(String csvFilePath) throws CricketAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
-            Iterator batsmanIterator = icsvBuilder.getCSVFileIterator(reader,Batsman.class);
-            Iterable<Batsman> batsmanIterable= () -> batsmanIterator;
-            StreamSupport.stream(batsmanIterable.spliterator(),false).map(Batsman.class::cast).forEach(batsmanRuns ->batsmanMap.put(batsmanRuns.player,batsmanRuns));
-            return batsmanMap;
+            List<E> csvFileList = icsvBuilder.getCSVFileList(reader, Batsman.class);
+            StreamSupport.stream(csvFileList.spliterator(), false)
+                    .map(Batsman.class::cast)
+                    .forEach(cricketLeague -> cricketList.add(new CricketLeagueDao(cricketLeague)));
+            return this.cricketList;
         } catch (IOException e) {
             throw new CricketAnalyserException(e.getMessage(),
                     CricketAnalyserException.ExceptionType.CRICKET_FILE_PROBLEM);
@@ -33,13 +34,14 @@ public class CricketLeagueLoader {
         }
     }
 
-    public  Map<String,Bowler> readCricketMostWicketsData(String csvFilePath) throws CricketAnalyserException {
+    public <E> List readCricketMostWicketsData(String csvFilePath) throws CricketAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(csvFilePath))) {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
-            Iterator<Bowler> bowlerIterator=icsvBuilder.getCSVFileIterator(reader,Bowler.class);
-            Iterable<Bowler> bowlerIterable=() -> bowlerIterator;
-            StreamSupport.stream(bowlerIterable.spliterator(),false).map(Bowler.class::cast).forEach(bowlerWickets ->bowlerMap.put(bowlerWickets.player,bowlerWickets));
-            return bowlerMap;
+            List <E>csvFileList = icsvBuilder.getCSVFileList(reader,Bowler.class);
+             StreamSupport.stream(csvFileList.spliterator(), false)
+                    .map(Bowler.class::cast)
+                    .forEach(cricketLeague -> cricketList.add(new CricketLeagueDao(cricketLeague)));
+            return this.cricketList;
         } catch (IOException e) {
             throw new CricketAnalyserException(e.getMessage(),
                     CricketAnalyserException.ExceptionType.CRICKET_FILE_PROBLEM);

@@ -1,12 +1,9 @@
-import com.google.gson.Gson;
-import com.opencsv.bean.CsvBindByName;
 import cricketAnalyser.*;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.List;
-import java.util.Map;
 
 public class CricketAnalyserTest {
 
@@ -21,9 +18,8 @@ public class CricketAnalyserTest {
     @Test
     public void givenLeagueDataCSVFIle_shouldReturnExactCount() throws CricketAnalyserException {
         CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        int loadData =cricketAnalyser.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
+        int loadData = cricketAnalyser.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
         Assert.assertEquals(100, loadData);
-
     }
 
     @Test
@@ -31,9 +27,9 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("MS Dhoni",batsmen[0].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            System.out.println(sortedData);
+            Assert.assertEquals("MS Dhoni", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -44,11 +40,9 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
             System.out.println(sortedData);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals(83.2,batsmen[0].avarage,0);
-
+            Assert.assertEquals(83.2, sortedData.get(0).average, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -59,9 +53,8 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals(0.0,batsmen[99].avarage,0);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            Assert.assertEquals(0.0, sortedData.get(99).average, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -101,7 +94,7 @@ public class CricketAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(WRONG_CSV_FILE_PATH_DELIMITER);
         } catch (CricketAnalyserException e) {
-             Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
         }
     }
 
@@ -122,9 +115,8 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals(333.33,batsmen[0].strikeRate,0);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
+            Assert.assertEquals(333.33, sortedData.get(0).strikeRate, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -135,9 +127,8 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals(63.15,batsmen[99].strikeRate,0);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
+            Assert.assertEquals(63.15, sortedData.get(99).strikeRate, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -148,10 +139,8 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-              System.out.println(sortedData);
-            Assert.assertEquals("Andre Russell",batsmen[0].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
+            Assert.assertEquals("Andre Russell", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -162,9 +151,8 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("Shakib Al Hasan",batsmen[99].player);
+            List<CricketLeagueDao> srtedData = cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
+            Assert.assertEquals("Tim Southee", srtedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -175,9 +163,8 @@ public class CricketAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("Andre Russell",batsmen[0].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
+            Assert.assertEquals("Andre Russell", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -188,9 +175,8 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("Shakib Al Hasan", batsmen[99].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
+            Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -201,9 +187,8 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("MS Dhoni",batsmen[0].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
+            Assert.assertEquals("MS Dhoni", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -214,9 +199,8 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("Harpreet Brar",batsmen[99].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
+            Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -227,9 +211,8 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("David Warner ",batsmen[0].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
+            Assert.assertEquals("David Warner ", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -240,9 +223,8 @@ public class CricketAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(IPL2019_RUNS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
-            Batsman[]batsmen=new Gson().fromJson(sortedData,Batsman[].class);
-            Assert.assertEquals("Shakib Al Hasan",batsmen[99].player);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
+            Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -250,23 +232,11 @@ public class CricketAnalyserTest {
 
     @Test
     public void whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount() throws CricketAnalyserException {
-     CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        int loadData =cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
+        CricketAnalyser cricketAnalyser = new CricketAnalyser();
+        int loadData = cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
         Assert.assertEquals(99, loadData);
     }
-
-    @Test
-    public void whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage(){
-        CricketAnalyser cricketAnalyser=new CricketAnalyser();
-        try {
-            cricketAnalyser.loadWicketsData(IPL2019_WICKETS_CSV_FILE_PATH);
-            String sortedData=cricketAnalyser.getSortedWicketsData(SortingFields.fields.BOWLERAVERAGE);
-            Bowler[]bowlers=new Gson().fromJson(sortedData,Bowler[].class);
-            Assert.assertEquals(166.0,bowlers[0].average,0);
-            Assert.assertEquals(0.0,bowlers[98].average,0);
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
-    }
 }
+
+
 

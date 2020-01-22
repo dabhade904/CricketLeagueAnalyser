@@ -1,12 +1,12 @@
 package cricketAnalyser;
 
-import com.google.gson.Gson;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
 public class CricketAnalyser {
-    Map<String, Batsman> cricketMap = new HashMap<>();
-    Map<String,Bowler> bowlerMap=new HashMap<>();
+    List <CricketLeagueDao>cricketMap = new ArrayList<>();
+   // Map<String,Bowler> bowlerMap=new HashMap<>();
 
     public int loadCricketData(String csvFilePath) throws CricketAnalyserException {
         cricketMap = new CricketLeagueLoader().readCricketMostRunsData(csvFilePath);
@@ -14,8 +14,8 @@ public class CricketAnalyser {
     }
 
     public int loadWicketsData(String csvFilePath) throws CricketAnalyserException {
-        bowlerMap = new CricketLeagueLoader().readCricketMostWicketsData(csvFilePath);
-        return bowlerMap.size();
+        cricketMap = new CricketLeagueLoader().readCricketMostWicketsData(csvFilePath);
+        return cricketMap.size();
     }
 
     public int getNumberOfRecord(String csvFilePath) {
@@ -27,22 +27,29 @@ public class CricketAnalyser {
         }
         return count;
     }
-
+/*
     public String getSortedData(SortingFields.fields sortFields) {
-        Comparator<Batsman> batsmanComparator = new SortingFields().getParameter(sortFields);
-        ArrayList batsmanList = cricketMap.values().stream().
+        Comparator<CricketLeagueDao> batsmanComparator = new SortingFields().getParameter(sortFields);
+        List batsmanList =cricketMap.stream(
                 sorted(batsmanComparator).
                 collect(Collectors.toCollection(ArrayList::new));
         String sortedDataJson = new Gson().toJson(batsmanList);
         return sortedDataJson;
-    }
-
+    }*/
+public List<CricketLeagueDao> getSortedData(SortingFields.fields sortFields) {
+    Comparator<CricketLeagueDao> comparator=new SortingFields().getParameter(sortFields);
+    cricketMap=cricketMap .stream()
+            .sorted(comparator.reversed())
+            .collect(Collectors.toList());
+    return this.cricketMap;
+}
+/*
     public String getSortedWicketsData(SortingFields.fields sortFields) {
-        Comparator<Bowler> bowlerComparator = new SortingFields().getParameters(sortFields);
-        ArrayList bowlerList = bowlerMap.values().stream().
+        Comparator<CricketLeagueDao> bowlerComparator = new SortingFields().getParameters(sortFields);
+        ArrayList bowlerList = cricketMap.values().stream().
                 sorted(bowlerComparator).
                 collect(Collectors.toCollection(ArrayList::new));
         String sortedDataJson = new Gson().toJson(bowlerList);
         return sortedDataJson;
-    }
+    }*/
 }
