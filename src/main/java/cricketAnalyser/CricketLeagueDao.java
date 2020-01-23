@@ -1,54 +1,97 @@
 package cricketAnalyser;
 
 public class CricketLeagueDao {
-    public String player;
-    public double average;
-    public double strikeRate;
-    public int fours;
-    public int sixes;
-    public int ballFaced;
-    public int runs;
-    public int wickets;
-    public double economy;
-    public int fiveWickets;
-    public int fourWickets;
-    public double bowlingAverage;
 
-    public CricketLeagueDao(Batsman batsmanRuns) {
-        this.player=batsmanRuns.player;
-        this.average= batsmanRuns.avarage;
-        this.strikeRate=batsmanRuns.strikeRate;
-        this.sixes=batsmanRuns.sixs;
-        this.fours=batsmanRuns.fours;
-        this.ballFaced=batsmanRuns.ballsFaced;
-        this.runs=batsmanRuns.runs;
+    public int pos;
+    public String player;
+    public int matches;
+    public int inns;
+    public int notOut;
+    public int runs;
+    public int highScore;
+    public double average;
+    public int ballFaced;
+    public double strikeRate;
+    public int centuries;
+    public int fifties;
+    public int fours;
+    public int sixs;
+    public double over;
+    public int wickets;
+    public int bestBowlingIndex;
+    public double economy;
+    public int fourWickets;
+    public int fiveWickets;
+
+    public CricketLeagueDao(Batsman iplBatting) {
+        pos = iplBatting.pos;
+        player = iplBatting.player;
+        matches = iplBatting.matches;
+        inns = iplBatting.inns;
+        notOut = iplBatting.notOut;
+        runs = iplBatting.runs;
+        highScore = iplBatting.highScore;
+        average = iplBatting.avg;
+        ballFaced = iplBatting.ballFaced;
+        strikeRate = iplBatting.strikeRate;
+        centuries = iplBatting.centuries;
+        fifties = iplBatting.halfCenturies;
+        fours = iplBatting.fours;
+        sixs = iplBatting.sixes;
     }
 
-    public CricketLeagueDao(Bowler bowler) {
-        this.player = bowler.player;
-        this.wickets = bowler.wikets;
-        this.bowlingAverage = bowler.average;
-        this.economy = bowler.economi;
-        this.fiveWickets = bowler.fiveWickets;
-        this.fourWickets = bowler.foursWickets;
-        this.strikeRate = bowler.strikeRate;
+    public CricketLeagueDao(Bowler iplBowling) {
+        pos = iplBowling.pos;
+        player = iplBowling.player;
+        matches = iplBowling.matches;
+        inns = iplBowling.innings;
+        over = iplBowling.over;
+        runs = iplBowling.runs;
+        wickets = iplBowling.wickets;
+        bestBowlingIndex = iplBowling.bestBowlingIndex;
+        average = iplBowling.average;
+        economy = iplBowling.economy;
+        strikeRate = iplBowling.strikeRate;
+        fourWickets = iplBowling.fourWickets;
+        fiveWickets = iplBowling.fiveWickets;
+    }
+
+    public CricketLeagueDao(CricketLeagueDao cricketCSV) {
+
     }
 
     @Override
     public String toString() {
         return "CricketLeagueDao{" +
-                "player='" + player + '\'' +
-                ", average=" + average +
-                ", strikeRate=" + strikeRate +
-                ", fours=" + fours +
-                ", sixes=" + sixes +
-                ", ballFaced=" + ballFaced +
+                "pos=" + pos +
+                ", player='" + player + '\'' +
+                ", matches=" + matches +
+                ", inns=" + inns +
+                ", notOut=" + notOut +
                 ", runs=" + runs +
+                ", highScore=" + highScore +
+                ", average=" + average +
+                ", ballFaced=" + ballFaced +
+                ", strikeRate=" + strikeRate +
+                ", centuries=" + centuries +
+                ", fifties=" + fifties +
+                ", fours=" + fours +
+                ", sixs=" + sixs +
+                ", over=" + over +
                 ", wickets=" + wickets +
+                ", bestBowlingIndex=" + bestBowlingIndex +
                 ", economy=" + economy +
-                ", fiveWickets=" + fiveWickets +
                 ", fourWickets=" + fourWickets +
-                ", bowlingAverage=" + bowlingAverage +
+                ", fiveWickets=" + fiveWickets +
                 '}';
+    }
+
+    public CricketLeagueDao() {
+    }
+
+        public Object getBatsmanDTO(CricketAnalyser.Cricket file) {
+        if (file.equals(CricketAnalyser.Cricket.BATSMAN))
+            return new Batsman(pos, player, matches, inns, notOut, runs, highScore, average, ballFaced, strikeRate, centuries, fifties, fours, sixs);
+        return new Bowler(pos, player, matches, inns, over, runs, wickets, bestBowlingIndex, average, economy, strikeRate, fourWickets, fiveWickets);
     }
 }

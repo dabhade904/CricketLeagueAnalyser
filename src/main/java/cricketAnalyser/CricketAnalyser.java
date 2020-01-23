@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class CricketAnalyser {
-    List<CricketLeagueDao> cricketMap = new ArrayList<>();
+    Map<String,CricketLeagueDao> cricketMap = new HashMap<>();
 
     public Cricket cricket;
 
@@ -25,11 +25,17 @@ public class CricketAnalyser {
         return cricketMap.size();
     }
 
-    public List getSortedData(SortingFields.fields sortedFields) {
-        Comparator<CricketLeagueDao> comparator = new SortingFields().getParameter(sortedFields);
-        cricketMap = cricketMap.stream()
-                .sorted(comparator)
+    public List getSortedData(Cricket cricket,SortingFields.fields... sortField) {
+        Comparator<CricketLeagueDao>batsmanComparator=null;
+        if (sortField.length==2)
+            batsmanComparator = SortingFields.getParameter(sortField[0]);
+        else {
+            batsmanComparator=SortingFields.getParameter(sortField[0]);
+        }
+        List cricketMap1= cricketMap.values().stream().
+                sorted(batsmanComparator).
+                map(batsmanDAO -> batsmanDAO.getBatsmanDTO(cricket))
                 .collect(Collectors.toList());
-        return cricketMap;
+        return cricketMap1;
     }
 }

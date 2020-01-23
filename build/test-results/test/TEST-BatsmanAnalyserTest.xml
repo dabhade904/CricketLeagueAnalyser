@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BatsmanAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-23T10:27:35" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.466">
+  <properties/>
+  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate" classname="BatsmanAnalyserTest" time="0.466"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

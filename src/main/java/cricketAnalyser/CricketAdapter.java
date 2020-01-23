@@ -9,28 +9,30 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.StreamSupport;
 
 public abstract class CricketAdapter {
 
-    public abstract <E> List<CricketLeagueDao> loadCricketData(String... csvFilePath) throws CricketAnalyserException;
+    public abstract <E> Map<String,CricketLeagueDao> loadCricketData(String... csvFilePath) throws CricketAnalyserException;
 
-    List<CricketLeagueDao> cricketMap = new ArrayList<>();
+    Map<String,CricketLeagueDao> cricketMap = new HashMap<>();
 
-    public <E> List <CricketLeagueDao> loadCricketData(Class<E> crickteClass, String... filePath) throws CricketAnalyserException {
+    public <E> Map<String,CricketLeagueDao> loadCricketData(Class<E> crickteClass, String... filePath) throws CricketAnalyserException {
         try (Reader reader = Files.newBufferedReader(Paths.get(filePath[0]))) {
             ICSVBuilder icsvBuilder = CSVBuilderFactory.createCSVBuilder();
             List<E> csvFileList = icsvBuilder.getCSVFileList(reader, crickteClass);
             if (crickteClass.getName().equals("cricketAnalyser.Batsman")) {
                 StreamSupport.stream(csvFileList.spliterator(), false)
                         .map(Batsman.class::cast)
-                        .forEach(cricketLeague -> cricketMap.add(new CricketLeagueDao(cricketLeague)));
+                        .forEach(cricketLeague -> cricketMap.put(cricketLeague.player,new CricketLeagueDao(cricketLeague)));
             }
             if (crickteClass.getName().equals("cricketAnalyser.Bowler")) {
                 StreamSupport.stream(csvFileList.spliterator(), false)
                         .map(Bowler.class::cast)
-                        .forEach(cricketLeague -> cricketMap.add(new CricketLeagueDao(cricketLeague)));
+                        .forEach(cricketLeague -> cricketMap.put(cricketLeague.player,new CricketLeagueDao(cricketLeague)));
             }
             return cricketMap;
         } catch (CSVBuilderException e) {

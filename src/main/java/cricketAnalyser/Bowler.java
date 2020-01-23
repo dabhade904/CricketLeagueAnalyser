@@ -17,13 +17,13 @@ public class Bowler {
     public int innings;
 
     @CsvBindByName(column = "Ov", required = true)
-    public double overs;
+    public double over;
 
     @CsvBindByName(column = "Runs", required = true)
     public int runs;
 
     @CsvBindByName(column = "Wkts", required = true)
-    public int wikets;
+    public int wickets;
 
     @CsvBindByName(column = "BBI", required = true)
     public int bestBowlingIndex;
@@ -32,52 +32,58 @@ public class Bowler {
     public double average;
 
     @CsvBindByName(column = "Econ", required = true)
-    public double economi;
+    public double economy;
 
     @CsvBindByName(column = "SR", required = true)
     public double strikeRate;
 
     @CsvBindByName(column = "4w", required = true)
-    public int foursWickets;
+    public int fourWickets;
 
     @CsvBindByName(column = "5w", required = true)
     public int fiveWickets;
 
-    public Bowler(int pos, String player, int matches, int innings, double overs, int runs, int wikets, int bestBowlingIndex, double average, double economi, double strikeRate, int foursWickets, int fiveWickets) {
+    @CsvBindByName(column = "ND")
+    public String nullData;
+
+    public Bowler(int pos, String player, int matches, int inns, double over,
+                  int runs, int wickets, int bestBowlingIndex, double average,
+                  double economy, double strikeRate, int fourWickets, int fiveWickets) {
         this.pos = pos;
         this.player = player;
         this.matches = matches;
-        this.innings = innings;
-        this.overs = overs;
+        this.innings = inns;
+        this.over = over;
         this.runs = runs;
-        this.wikets = wikets;
+        this.wickets = wickets;
         this.bestBowlingIndex = bestBowlingIndex;
         this.average = average;
-        this.economi = economi;
+        this.economy = economy;
         this.strikeRate = strikeRate;
-        this.foursWickets = foursWickets;
         this.fiveWickets = fiveWickets;
-    }
-
-    public Bowler() {
+        this.fourWickets = fourWickets;
     }
 
     @Override
     public String toString() {
-        return "Bowler{" +
+        return "IPLBowling{" +
                 "pos=" + pos +
                 ", player='" + player + '\'' +
                 ", matches=" + matches +
                 ", innings=" + innings +
-                ", overs=" + overs +
+                ", over=" + over +
                 ", runs=" + runs +
-                ", wikets=" + wikets +
+                ", wickets=" + wickets +
                 ", bestBowlingIndex=" + bestBowlingIndex +
                 ", average=" + average +
-                ", economi=" + economi +
+                ", economy=" + economy +
                 ", strikeRate=" + strikeRate +
-                ", foursWickets=" + foursWickets +
+                ", fourWickets=" + fourWickets +
                 ", fiveWickets=" + fiveWickets +
+                ", nullData='" + nullData + '\'' +
                 '}';
+    }
+
+    public Bowler() {
     }
 }

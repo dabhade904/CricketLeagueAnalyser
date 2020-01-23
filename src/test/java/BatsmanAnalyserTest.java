@@ -13,6 +13,7 @@ public class BatsmanAnalyserTest {
     private static final String WRONG_CSV_FILE_PATH_DELIMITER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileDelimiter.csv";
     private static final String WRONG_CSV_FILE_PATH_HEADER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileHeader.csv";
 
+
     @Test
     public void givenLeagueDataCSVFIle_shouldReturnExactCount() throws CricketAnalyserException {
         CricketAnalyser cricketAnalyser = new CricketAnalyser();
@@ -25,7 +26,7 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.AVERAGE);
             Assert.assertEquals("MS Dhoni", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -37,7 +38,7 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.AVERAGE);
             Assert.assertEquals(83.2, sortedData.get(0).average, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -49,8 +50,8 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.AVERAGE);
-            Assert.assertEquals(0.0, sortedData.get(99).average, 0);
+            List<Batsman> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.AVERAGE);
+            Assert.assertEquals(0.0, sortedData.get(99).avg, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -107,15 +108,11 @@ public class BatsmanAnalyserTest {
     }
 
     @Test
-    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate() {
+    public void givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate() throws CricketAnalyserException {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
-        try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
+            List<Batsman> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN, SortingFields.fields.STRIKERATE);
             Assert.assertEquals(333.33, sortedData.get(0).strikeRate, 0);
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
     }
 
     @Test
@@ -123,7 +120,7 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKERATE);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.STRIKERATE);
             Assert.assertEquals(63.15, sortedData.get(99).strikeRate, 0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -135,7 +132,7 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.BOUNDARIES);
             Assert.assertEquals("Andre Russell", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -147,7 +144,7 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> srtedData = cricketAnalyse.getSortedData(SortingFields.fields.BOUNDARIES);
+            List<CricketLeagueDao> srtedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.BOUNDARIES);
             Assert.assertEquals("Tim Southee", srtedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -159,7 +156,7 @@ public class BatsmanAnalyserTest {
         CricketAnalyser cricketAnalyse = new CricketAnalyser();
         try {
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.STRIKE_WITH_BOUNDARY);
             Assert.assertEquals("Andre Russell", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -171,7 +168,7 @@ public class BatsmanAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.STRIKE_WITH_BOUNDARY);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.STRIKE_WITH_BOUNDARY);
             Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -183,7 +180,7 @@ public class BatsmanAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.RUNS);
             Assert.assertEquals("MS Dhoni", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -195,7 +192,7 @@ public class BatsmanAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNS);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.RUNS);
             Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -207,7 +204,7 @@ public class BatsmanAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.RUNSWITHAVERAGE);
             Assert.assertEquals("David Warner ", sortedData.get(0).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
@@ -219,7 +216,7 @@ public class BatsmanAnalyserTest {
         try {
             CricketAnalyser cricketAnalyse = new CricketAnalyser();
             cricketAnalyse.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(SortingFields.fields.RUNSWITHAVERAGE);
+            List<CricketLeagueDao> sortedData = cricketAnalyse.getSortedData(CricketAnalyser.Cricket.BATSMAN,SortingFields.fields.RUNSWITHAVERAGE);
             Assert.assertEquals("Tim Southee", sortedData.get(99).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();

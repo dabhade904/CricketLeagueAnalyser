@@ -14,7 +14,7 @@ public class Batsman {
     public int matches;
 
     @CsvBindByName(column = "Inns", required = true)
-    public int innings;
+    public int inns;
 
     @CsvBindByName(column = "NO", required = true)
     public int notOut;
@@ -23,66 +23,69 @@ public class Batsman {
     public int runs;
 
     @CsvBindByName(column = "HS", required = true)
-    public String highScore;
+    public int highScore;
 
     @CsvBindByName(column = "Avg", required = true)
-    public double avarage;
+    public double avg;
 
     @CsvBindByName(column = "BF", required = true)
-    public int ballsFaced;
+    public int ballFaced;
 
     @CsvBindByName(column = "SR", required = true)
     public double strikeRate;
 
     @CsvBindByName(column = "100", required = true)
-    public int hundreds;
+    public int centuries;
 
     @CsvBindByName(column = "50", required = true)
-    public int fifty;
+    public int halfCenturies;
 
     @CsvBindByName(column = "4s", required = true)
     public int fours;
 
     @CsvBindByName(column = "6s", required = true)
-    public int sixs;
+    public int sixes;
 
-    public Batsman(int pos, String player, int matches, int innings, int notOut, int runs, String highScore, double avarage, int ballsFaced, double strikeRate, int hundreds, int fifty, int fours, int sixs) {
-        this.pos = pos;
-        this.player = player;
-        this.matches = matches;
-        this.innings = innings;
-        this.notOut = notOut;
-        this.runs = runs;
-        this.highScore = highScore;
-        this.avarage = avarage;
-        this.ballsFaced = ballsFaced;
-        this.strikeRate = strikeRate;
-        this.hundreds = hundreds;
-        this.fifty = fifty;
-        this.fours = fours;
-        this.sixs = sixs;
+    public Batsman(int pos, String player, int matches, int inns, int notOut,
+                      int runs, int highScore, double average, int ballFaced,
+                      double strikeRate, int centuries, int fifties, int fours, int sixs) {
+        this.pos=pos;
+        this.player=player;
+        this.matches=matches;
+        this.inns=inns;
+        this.notOut=notOut;
+        this.runs=runs;
+        this.highScore=highScore;
+        this.strikeRate=strikeRate;
+        this.centuries=centuries;
+        this.halfCenturies=fifties;
+        this.fours=fours;
+        this.sixes=sixs;
+        this.avg=average;
+        this.ballFaced=ballFaced;
     }
 
-    public Batsman() {
-    }
 
     @Override
     public String toString() {
-        return "Batsman{" +
+        return "{" +
                 "pos=" + pos +
                 ", player='" + player + '\'' +
                 ", matches=" + matches +
-                ", innings=" + innings +
-                ", noPlay=" + notOut +
+                ", inns=" + inns +
+                ", notOut=" + notOut +
                 ", runs=" + runs +
                 ", highScore='" + highScore + '\'' +
-                ", avarage='" + avarage + '\'' +
-                ", ballsFaced=" + ballsFaced +
+                ", avg=" + avg +
+                ", ballFaced=" + ballFaced +
                 ", strikeRate=" + strikeRate +
-                ", hundreds=" + hundreds +
-                ", fifty=" + fifty +
+                ", centuries=" + centuries +
+                ", halfCenturies=" + halfCenturies +
                 ", fours=" + fours +
-                ", sixs=" + sixs +
+                ", sixes=" + sixes +
                 '}';
+    }
+
+    public Batsman() {
     }
 }

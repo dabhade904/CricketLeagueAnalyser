@@ -76,7 +76,7 @@ public class BowlerAnalyserTest {
         CricketAnalyser cricketAnalyser=new CricketAnalyser();
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERAVERAGE);
+            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.BOWLERAVERAGE);
             Assert.assertEquals(0.0,sortedData.get(0).average,0);
             Assert.assertEquals(0.0,sortedData.get(98).average,0);
         } catch (CricketAnalyserException e) {
@@ -89,7 +89,7 @@ public class BowlerAnalyserTest {
         CricketAnalyser cricketAnalyser=new CricketAnalyser();
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERSTRIKERATE);
+            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.BOWLERSTRIKERATE);
             Assert.assertEquals(0.0,sortedData.get(0).strikeRate,0);
             Assert.assertEquals(120.0,sortedData.get(98).strikeRate,0);
         } catch (CricketAnalyserException e) {
@@ -102,7 +102,7 @@ public class BowlerAnalyserTest {
         CricketAnalyser cricketAnalyser=new CricketAnalyser();
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLER_ECONOMY);
+            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.BOWLER_ECONOMY);
             Assert.assertEquals(13.5,sortedData.get(0).economy,0);
             Assert.assertEquals(4.8,sortedData.get(98).economy,0);
         } catch (CricketAnalyserException e) {
@@ -115,7 +115,7 @@ public class BowlerAnalyserTest {
         CricketAnalyser cricketAnalyser=new CricketAnalyser();
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-            List<CricketLeagueDao>leagueDaoList=cricketAnalyser.getSortedData(SortingFields.fields.STRIKRATE_WITH_FIVE_AND_FOUR_WICKETS);
+            List<CricketLeagueDao>leagueDaoList=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.STRIKRATE_WITH_FIVE_AND_FOUR_WICKETS);
             System.out.println(leagueDaoList.get(98).player);
             Assert.assertEquals("Kagiso Rabada",leagueDaoList.get(0).player);
             Assert.assertEquals("Krishnappa Gowtham",leagueDaoList.get(98).player);
