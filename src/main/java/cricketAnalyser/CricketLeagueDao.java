@@ -25,25 +25,13 @@ public class CricketLeagueDao {
     }
 
     public CricketLeagueDao(Bowler bowler) {
-        this.player= bowler.player;
-        this.wickets=bowler.wikets;
-        this.bowlingAverage=bowler.average;
+        this.player = bowler.player;
+        this.wickets = bowler.wikets;
+        this.bowlingAverage = bowler.average;
         this.economy = bowler.economi;
         this.fiveWickets = bowler.fiveWickets;
         this.fourWickets = bowler.foursWickets;
         this.strikeRate = bowler.strikeRate;
-    }
-
-    public CricketLeagueDao() { }
-
-    public CricketLeagueDao(int position, String player, int mat, int innings, int no, int runs, double average, int ballFaced, double strikeRate, int century, int halfcentury, int fours, int sixes) {
-        this.player = player;
-        this.runs = runs;
-        this.average = average;
-        this.ballFaced = ballFaced;
-        this.strikeRate =strikeRate;
-        this.fours=fours;
-        this.sixes=sixes;
     }
 
     @Override

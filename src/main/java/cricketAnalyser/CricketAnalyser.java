@@ -25,17 +25,6 @@ public class CricketAnalyser {
         return cricketMap.size();
     }
 
-
-    public int getNumberOfRecord(String csvFilePath) {
-        int count = 0;
-        try {
-            int batsmanMap1 = loadCricketData(cricket, csvFilePath);
-            return batsmanMap1;
-        } catch (CricketAnalyserException e) {
-        }
-        return count;
-    }
-
     public List getSortedData(SortingFields.fields sortedFields) {
         Comparator<CricketLeagueDao> comparator = new SortingFields().getParameter(sortedFields);
         cricketMap = cricketMap.stream()
@@ -44,4 +33,3 @@ public class CricketAnalyser {
         return cricketMap;
     }
 }
-
