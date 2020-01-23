@@ -20,8 +20,6 @@
       <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/test/java/censusanalyser/CensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/test/java/censusanalyser/CensusAnalyserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/test/resources/IndiaStateCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/test/resources/IndiaStateCode.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BatsmanAnalyserTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BatsmanAnalyserTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java" afterDir="false" />
     </list>
@@ -69,11 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+            <state relative-caret-position="270">
+              <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,11 +157,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="132" column="51" selection-start-line="132" selection-start-column="51" selection-end-line="132" selection-end-column="51" />
+            <state relative-caret-position="221">
+              <caret line="147" column="32" lean-forward="true" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -214,8 +212,8 @@
         <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/Bowler.java" />
         <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" />
         <option value="$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" />
         <option value="$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" />
       </list>
     </option>
   </component>
@@ -331,7 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult">
+  <component name="RunManager" selected="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData">
     <configuration name="BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnLowestBattingAverage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -358,26 +356,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="BowlerAnalyserTest.givenLeagueData_withWrongFile_shouldThrowException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BowlerAnalyserTest.givenLeagueData_withWrongFile_shouldThrowException&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -432,20 +410,40 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate" />
-      <item itemvalue="Gradle.BowlerAnalyserTest.givenLeagueData_withWrongFile_shouldThrowException" />
       <item itemvalue="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount" />
       <item itemvalue="Gradle.BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnLowestBattingAverage" />
       <item itemvalue="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult" />
+      <item itemvalue="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData" />
         <item itemvalue="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult" />
         <item itemvalue="Gradle.BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate" />
         <item itemvalue="Gradle.BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnLowestBattingAverage" />
         <item itemvalue="Gradle.BowlerAnalyserTest.whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount" />
-        <item itemvalue="Gradle.BowlerAnalyserTest.givenLeagueData_withWrongFile_shouldThrowException" />
       </list>
     </recent_temporary>
   </component>
@@ -463,12 +461,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BatsmanAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate - 2020.01.23 at 15h 51m 07s.xml">
-      <configuration name="BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BatsmanAnalyserTest_givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate - 2020.01.23 at 15h 57m 36s.xml">
-      <configuration name="BatsmanAnalyserTest.givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="BowlerAnalyserTest_whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult - 2020.01.23 at 16h 21m 33s.xml">
       <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -492,6 +484,12 @@
     </history-entry>
     <history-entry file="BowlerAnalyserTest_whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult - 2020.01.23 at 16h 44m 55s.xml">
       <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="BowlerAnalyserTest_whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData - 2020.01.23 at 16h 56m 39s.xml">
+      <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="BowlerAnalyserTest_whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData - 2020.01.23 at 16h 57m 09s.xml">
+      <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -579,6 +577,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java</url>
+          <line>139</line>
+          <properties class="BowlerAnalyserTest" method="whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -859,20 +865,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="147" column="32" lean-forward="true" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="132" column="51" selection-start-line="132" selection-start-column="51" selection-end-line="132" selection-end-column="51" />
+        <state relative-caret-position="270">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

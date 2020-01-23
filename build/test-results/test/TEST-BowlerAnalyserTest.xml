@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="BowlerAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-23T11:14:54" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.489">
+<testsuite name="BowlerAnalyserTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-23T11:35:10" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.467">
   <properties/>
-  <testcase name="whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult" classname="BowlerAnalyserTest" time="0.489"/>
+  <testcase name="whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData" classname="BowlerAnalyserTest" time="0.467"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -19,6 +19,7 @@ public class SortingFields {
         BOWLER_ECONOMY,
         STRIKRATE_WITH_FIVE_AND_FOUR_WICKETS,
         AVERAGE_WITH_STRIKERATE,
+        MAXIMUM_WICKETES_WITH_AVERAGE,
     }
 
     public static Comparator<CricketLeagueDao> getParameter(fields parameter) {
@@ -43,8 +44,11 @@ public class SortingFields {
         sortByFields.put(fields.BOWLER_ECONOMY, bowlerEconomy);
         Comparator<CricketLeagueDao> fiveWickets4WicketsComparator = Comparator.comparing(bowler -> bowler.fiveWickets + bowler.fourWickets, Comparator.reverseOrder());
         sortByFields.put(fields.STRIKRATE_WITH_FIVE_AND_FOUR_WICKETS, fiveWickets4WicketsComparator.thenComparing(bowlerStrikeRate));
-
         sortByFields.put(fields.AVERAGE_WITH_STRIKERATE, bowlerAverage.thenComparing(bowlerStrikeRate));
+
+        Comparator<CricketLeagueDao>bowlerWicketes=Comparator.comparing(bowler-> bowler.wickets,Comparator.reverseOrder());
+        Comparator<CricketLeagueDao>bowlingAverage=Comparator.comparing(bowler->bowler.average);
+        sortByFields.put(fields.MAXIMUM_WICKETES_WITH_AVERAGE,bowlerWicketes.thenComparing(bowlingAverage));
 
 
         Comparator<CricketLeagueDao> comparator = sortByFields.get(parameter);

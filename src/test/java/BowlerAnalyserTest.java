@@ -124,7 +124,7 @@ public class BowlerAnalyserTest {
     }
 
     @Test
-    public  void whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult(){
+    public  void whenGivenBowlerCSV_sortOnBowlingAverageWithStrikeRate_shouldReturnResult(){
         CricketAnalyser cricketAnalyser=new CricketAnalyser();
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
@@ -136,4 +136,16 @@ public class BowlerAnalyserTest {
         }
     }
 
+    @Test
+    public void whenGivenBowlerCSV_whoTookMaximumWktsWithBestStrikeRate_shouldReturnSortedData(){
+        CricketAnalyser cricketAnalyser=new CricketAnalyser();
+        try {
+            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
+            List<Bowler>leagueDaoList=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.MAXIMUM_WICKETES_WITH_AVERAGE);
+            Assert.assertEquals("Imran Tahir",leagueDaoList.get(0).player);
+            Assert.assertEquals("Yusuf Pathan",leagueDaoList.get(98).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
