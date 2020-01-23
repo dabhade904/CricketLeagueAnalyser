@@ -90,8 +90,8 @@ public class BowlerAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
             List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERSTRIKERATE);
-            Assert.assertEquals(120.0,sortedData.get(0).strikeRate,0);
-            Assert.assertEquals(0.0,sortedData.get(98).strikeRate,0);
+            Assert.assertEquals(0.0,sortedData.get(0).strikeRate,0);
+            Assert.assertEquals(120.0,sortedData.get(98).strikeRate,0);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
@@ -105,6 +105,20 @@ public class BowlerAnalyserTest {
             List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLER_ECONOMY);
             Assert.assertEquals(13.5,sortedData.get(0).economy,0);
             Assert.assertEquals(4.8,sortedData.get(98).economy,0);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    public void whenGivenBowlerCSV_sortingStrikeRateOnFiveAndFourWicktes_shouldReturnStrikingRate(){
+        CricketAnalyser cricketAnalyser=new CricketAnalyser();
+        try {
+            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
+            List<CricketLeagueDao>leagueDaoList=cricketAnalyser.getSortedData(SortingFields.fields.STRIKRATE_WITH_FIVE_AND_FOUR_WICKETS);
+            System.out.println(leagueDaoList.get(98).player);
+            Assert.assertEquals("Kagiso Rabada",leagueDaoList.get(0).player);
+            Assert.assertEquals("Krishnappa Gowtham",leagueDaoList.get(98).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
