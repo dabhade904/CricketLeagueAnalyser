@@ -116,11 +116,24 @@ public class BowlerAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
             List<CricketLeagueDao>leagueDaoList=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.STRIKRATE_WITH_FIVE_AND_FOUR_WICKETS);
-            System.out.println(leagueDaoList.get(98).player);
             Assert.assertEquals("Kagiso Rabada",leagueDaoList.get(0).player);
             Assert.assertEquals("Krishnappa Gowtham",leagueDaoList.get(98).player);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public  void whenGivenBowlerCSV_sortOnBowlingAveragewithStrikeRate_shouldReturnResult(){
+        CricketAnalyser cricketAnalyser=new CricketAnalyser();
+        try {
+            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
+            List<Bowler>leagueDaoList=cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BOWLER,SortingFields.fields.AVERAGE_WITH_STRIKERATE);
+             Assert.assertEquals("Suresh Raina",leagueDaoList.get(0).player);
+            Assert.assertEquals("Krishnappa Gowtham",leagueDaoList.get(98).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
