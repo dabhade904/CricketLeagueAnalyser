@@ -5,7 +5,7 @@ import org.junit.rules.ExpectedException;
 
 import java.util.List;
 
-public class CricketAnalyserTest {
+public class BatsmanAnalyserTest {
 
     private static final String IPL2019_RUNS_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/IPL2019FactSheetMostRuns.csv";
     private static final String WRONG_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/WrongFileData.csv";
@@ -228,36 +228,4 @@ public class CricketAnalyserTest {
         }
     }
 
-    @Test
-    public void whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount() throws CricketAnalyserException {
-        CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        int loadData = cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-        Assert.assertEquals(99, loadData);
-    }
-
-    @Test
-    public void whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage(){
-        CricketAnalyser cricketAnalyser=new CricketAnalyser();
-        try {
-            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERAVERAGE);
-            Assert.assertEquals(0.0,sortedData.get(0).average,0);
-            Assert.assertEquals(0.0,sortedData.get(98).average,0);
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Test
-    public  void whenGivenBowlerCSV_whenSortOnStrikeRate_shouldReturnTopStrikeRate(){
-        CricketAnalyser cricketAnalyser=new CricketAnalyser();
-        try {
-            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH);
-            List<CricketLeagueDao> sortedData=cricketAnalyser.getSortedData(SortingFields.fields.BOWLERSTRIKERATE);
-            Assert.assertEquals(120.0,sortedData.get(0).strikeRate,0);
-            Assert.assertEquals(0.0,sortedData.get(98).strikeRate,0);
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
-    }
 }

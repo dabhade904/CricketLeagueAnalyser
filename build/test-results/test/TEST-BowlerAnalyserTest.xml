@@ -1,34 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="CricketAnalyserTest" tests="21" skipped="0" failures="0" errors="0" timestamp="2020-01-22T13:48:21" hostname="admin1-HP-EliteBook-Folio-9480m" time="2.711">
+<testsuite name="BowlerAnalyserTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-01-23T05:08:52" hostname="admin1-HP-EliteBook-Folio-9480m" time="1.005">
   <properties/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnRuns_shouldReturnLowestAverage" classname="CricketAnalyserTest" time="0.486"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnLowestBattingAverage" classname="CricketAnalyserTest" time="0.144"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnLowestStrikeRate" classname="CricketAnalyserTest" time="0.177"/>
-  <testcase name="givenIndiaCSVFile_whenCorrectButTypeIncorrect_ShouldReturnCustomException" classname="CricketAnalyserTest" time="0.033"/>
-  <testcase name="givenLeagueDataCSVFIle_shouldReturnExactCount" classname="CricketAnalyserTest" time="0.166"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithHighestStrikeRate" classname="CricketAnalyserTest" time="0.15"/>
-  <testcase name="whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount" classname="CricketAnalyserTest" time="0.145"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnLowestAverage" classname="CricketAnalyserTest" time="0.123"/>
-  <testcase name="givenLeagueData_withWrongFile_shouldThrowException" classname="CricketAnalyserTest" time="0.098"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFour" classname="CricketAnalyserTest" time="0.144"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAndFourWithLowestStrikeRate" classname="CricketAnalyserTest" time="0.131"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnRuns_shouldReturnHighestAverage" classname="CricketAnalyserTest" time="0.108"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestAverage" classname="CricketAnalyserTest" time="0.097"/>
-  <testcase name="whenGivenBowlerCSV_whenSortOnStrikeRate_shouldReturnTopStrikeRate" classname="CricketAnalyserTest" time="0.101"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnHighestStrikeRate" classname="CricketAnalyserTest" time="0.109"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnStrikeRate_shouldReturnMostSixAnd" classname="CricketAnalyserTest" time="0.129"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnData" classname="CricketAnalyserTest" time="0.109"/>
-  <testcase name="whenGivenCSVFileCorrect_butDelimiterIncorrect_shouldReturnCustomException" classname="CricketAnalyserTest" time="0.016"/>
-  <testcase name="whenGivenCSVFileCorrect_butCSVHeaderIncorrect_shouldReturnCustomException" classname="CricketAnalyserTest" time="0.005"/>
-  <testcase name="givenLeagueDataCSVFile_whenSortedOnAverage_shouldReturnHighestBattingAverage" classname="CricketAnalyserTest" time="0.119"/>
-  <testcase name="whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage" classname="CricketAnalyserTest" time="0.11"/>
+  <testcase name="givenIndiaCSVFile_whenCorrectButTypeIncorrect_ShouldReturnCustomException" classname="BowlerAnalyserTest" time="0.056"/>
+  <testcase name="whenGivenBowlerCSV_whenSortOnEconomy_shouldReturnBestEconomy" classname="BowlerAnalyserTest" time="0.443"/>
+  <testcase name="whenGivenBowlerCSV_ifDataLoad_shouldReturnExactCount" classname="BowlerAnalyserTest" time="0.12"/>
+  <testcase name="givenLeagueData_withWrongFile_shouldThrowException" classname="BowlerAnalyserTest" time="0.161"/>
+  <testcase name="whenGivenBowlerCSV_whenSortOnStrikeRate_shouldReturnTopStrikeRate" classname="BowlerAnalyserTest" time="0.114"/>
+  <testcase name="whenGivenCSVFileCorrect_butDelimiterIncorrect_shouldReturnCustomException" classname="BowlerAnalyserTest" time="0.004"/>
+  <testcase name="whenGivenCSVFileCorrect_butCSVHeaderIncorrect_shouldReturnCustomException" classname="BowlerAnalyserTest" time="0.006"/>
+  <testcase name="whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage" classname="BowlerAnalyserTest" time="0.097"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[cricketAnalyser.CricketAnalyserException: Error capturing CSV header!
 	at cricketAnalyser.CricketAdapter.loadCricketData(CricketAdapter.java:42)
 	at cricketAnalyser.BatsmanAdapter.loadCricketData(BatsmanAdapter.java:9)
 	at cricketAnalyser.CricketAdapterFactory.getCricketData(CricketAdapterFactory.java:10)
 	at cricketAnalyser.CricketAnalyser.loadCricketData(CricketAnalyser.java:24)
-	at CricketAnalyserTest.givenIndiaCSVFile_whenCorrectButTypeIncorrect_ShouldReturnCustomException(CricketAnalyserTest.java:80)
+	at BowlerAnalyserTest.givenIndiaCSVFile_whenCorrectButTypeIncorrect_ShouldReturnCustomException(BowlerAnalyserTest.java:35)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,7 +63,7 @@
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.lang.Thread.run(Thread.java:748)
-Exception in thread "pool-17-thread-1" java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: The following required fields were not present for one record of the input: sixs
+Exception in thread "pool-5-thread-1" java.lang.RuntimeException: com.opencsv.exceptions.CsvRequiredFieldEmptyException: The following required fields were not present for one record of the input: sixs
 	at com.opencsv.bean.concurrent.ProcessCsvLine.run(ProcessCsvLine.java:91)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
