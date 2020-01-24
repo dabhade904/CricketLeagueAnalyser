@@ -149,4 +149,16 @@ public class BowlerAnalyserTest {
         }
     }
 
+    @Test
+    public void givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult() {
+        CricketAnalyser cricketAnalyser = new CricketAnalyser();
+        try {
+            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, IPL2019_RUNS_CSV_FILE_PATH, IPL2019_WICKETS_CSV_FILE_PATH);
+            List<Batsman> sortedData = cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BATSMAN, SortingFields.fields.BATTING_AND_BOWLING_AVG);
+            Assert.assertEquals("Ms Dhoni", sortedData.get(0).player);
+            Assert.assertEquals("Harpreet Brar", sortedData.get(98).player);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
+    }
 }
