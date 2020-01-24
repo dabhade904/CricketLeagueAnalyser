@@ -10,6 +10,7 @@ public class CricketLeagueDao {
     public int runs;
     public int highScore;
     public double average;
+    public double ball_average;
     public int ballFaced;
     public double strikeRate;
     public int centuries;
@@ -31,7 +32,7 @@ public class CricketLeagueDao {
         notOut = iplBatting.notOut;
         runs = iplBatting.runs;
         highScore = iplBatting.highScore;
-        average = iplBatting.avg;
+        average = iplBatting.average;
         ballFaced = iplBatting.ballFaced;
         strikeRate = iplBatting.strikeRate;
         centuries = iplBatting.centuries;
@@ -49,7 +50,7 @@ public class CricketLeagueDao {
         runs = iplBowling.runs;
         wickets = iplBowling.wickets;
         bestBowlingIndex = iplBowling.bestBowlingIndex;
-        average = iplBowling.average;
+        ball_average = iplBowling.ball_average;
         economy = iplBowling.economy;
         strikeRate = iplBowling.strikeRate;
         fourWickets = iplBowling.fourWickets;
@@ -71,6 +72,7 @@ public class CricketLeagueDao {
                 ", runs=" + runs +
                 ", highScore=" + highScore +
                 ", average=" + average +
+                ", ball_average=" + ball_average +
                 ", ballFaced=" + ballFaced +
                 ", strikeRate=" + strikeRate +
                 ", centuries=" + centuries +

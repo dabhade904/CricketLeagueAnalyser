@@ -4,10 +4,11 @@ public class CricketAnalyserException extends Exception {
 
     public ExceptionType type;
 
+    public CricketAnalyserException(String message, String name) {
+    }
+
     public enum ExceptionType {
         CRICKET_FILE_PROBLEM,
-        FILE_NOT_FOUND,
-        NO_DATA,
         UNABLE_TO_PARSE,
         DELIMITER_OR_HEADER_PROBLEM,
     }

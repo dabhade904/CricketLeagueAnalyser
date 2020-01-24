@@ -26,7 +26,7 @@ public class Batsman {
     public int highScore;
 
     @CsvBindByName(column = "Avg", required = true)
-    public double avg;
+    public double average;
 
     @CsvBindByName(column = "BF", required = true)
     public int ballFaced;
@@ -61,7 +61,7 @@ public class Batsman {
         this.halfCenturies=fifties;
         this.fours=fours;
         this.sixes=sixs;
-        this.avg=average;
+        this.average=average;
         this.ballFaced=ballFaced;
     }
 
@@ -76,7 +76,7 @@ public class Batsman {
                 ", notOut=" + notOut +
                 ", runs=" + runs +
                 ", highScore='" + highScore + '\'' +
-                ", avg=" + avg +
+                ", average=" + average +
                 ", ballFaced=" + ballFaced +
                 ", strikeRate=" + strikeRate +
                 ", centuries=" + centuries +

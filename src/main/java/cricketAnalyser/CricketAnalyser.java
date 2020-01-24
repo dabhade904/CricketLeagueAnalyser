@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class CricketAnalyser {
     Map<String,CricketLeagueDao> cricketMap = new HashMap<>();
-
+    private CricketAdapter cricketAdapter;
     public Cricket cricket;
 
     public CricketAnalyser() {
@@ -20,6 +20,7 @@ public class CricketAnalyser {
         this.cricket = cricket;
     }
 
+
     public int loadCricketData(Cricket cricket, String... csvFilePath) throws CricketAnalyserException {
         cricketMap = new CricketAdapterFactory().getCricketData(cricket, csvFilePath);
         return cricketMap.size();
@@ -27,8 +28,8 @@ public class CricketAnalyser {
 
     public List getSortedData(Cricket cricket,SortingFields.fields... sortField) {
         Comparator<CricketLeagueDao>batsmanComparator=null;
-        if (sortField.length==2)
-            batsmanComparator = SortingFields.getParameter(sortField[0]);
+        if (sortField.length==0)
+            batsmanComparator = SortingFields.getParameter(sortField[1]);
         else {
             batsmanComparator=SortingFields.getParameter(sortField[0]);
         }

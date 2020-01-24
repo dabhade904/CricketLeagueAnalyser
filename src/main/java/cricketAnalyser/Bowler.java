@@ -29,7 +29,7 @@ public class Bowler {
     public int bestBowlingIndex;
 
     @CsvBindByName(column = "Avg", required = true)
-    public double average;
+    public double ball_average;
 
     @CsvBindByName(column = "Econ", required = true)
     public double economy;
@@ -47,7 +47,7 @@ public class Bowler {
     public String nullData;
 
     public Bowler(int pos, String player, int matches, int inns, double over,
-                  int runs, int wickets, int bestBowlingIndex, double average,
+                  int runs, int wickets, int bestBowlingIndex, double ball_average,
                   double economy, double strikeRate, int fourWickets, int fiveWickets) {
         this.pos = pos;
         this.player = player;
@@ -57,12 +57,13 @@ public class Bowler {
         this.runs = runs;
         this.wickets = wickets;
         this.bestBowlingIndex = bestBowlingIndex;
-        this.average = average;
+        this.ball_average = ball_average;
         this.economy = economy;
         this.strikeRate = strikeRate;
         this.fiveWickets = fiveWickets;
         this.fourWickets = fourWickets;
     }
+
 
     @Override
     public String toString() {
@@ -75,7 +76,7 @@ public class Bowler {
                 ", runs=" + runs +
                 ", wickets=" + wickets +
                 ", bestBowlingIndex=" + bestBowlingIndex +
-                ", average=" + average +
+                ", average=" + ball_average +
                 ", economy=" + economy +
                 ", strikeRate=" + strikeRate +
                 ", fourWickets=" + fourWickets +
@@ -83,6 +84,7 @@ public class Bowler {
                 ", nullData='" + nullData + '\'' +
                 '}';
     }
+
 
     public Bowler() {
     }
