@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BattingAndBowlingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-24T07:03:52" hostname="admin1-HP-EliteBook-Folio-9480m" time="0.797">
+  <properties/>
+  <testcase name="givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" classname="BattingAndBowlingTest" time="0.797"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

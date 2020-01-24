@@ -10,7 +10,6 @@ public class BowlerAnalyserTest {
     private static final String WRONG_CSV_FILE_TYPE = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/WrongFileType.txt";
     private static final String WRONG_CSV_FILE_PATH_DELIMITER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileDelimiter.csv";
     private static final String WRONG_CSV_FILE_PATH_HEADER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileHeader.csv";
-    private static final String IPL2019_RUNS_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/IPL2019FactSheetMostRuns.csv";
     private static final String IPL2019_WICKETS_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/IPL2019FactSheeMostWickets.csv";
 
     @Test
@@ -149,28 +148,5 @@ public class BowlerAnalyserTest {
         }
     }
 
-    @Test
-    public void givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult() {
-        CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        try {
-            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, IPL2019_RUNS_CSV_FILE_PATH, IPL2019_WICKETS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BATSMAN, SortingFields.fields.BATTING_AND_BOWLING_AVG);
-            Assert.assertEquals("Ms Dhoni", sortedData.get(0).player);
-            Assert.assertEquals("Harpreet Brar", sortedData.get(98).player);
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
-    }
 
-    @Test
-    public void givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder() {
-        CricketAnalyser cricketAnalyser = new CricketAnalyser();
-        try {
-            cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, IPL2019_RUNS_CSV_FILE_PATH, IPL2019_WICKETS_CSV_FILE_PATH);
-            List<Batsman> sortedData = cricketAnalyser.getSortedData(CricketAnalyser.Cricket.BATSMAN, SortingFields.fields.ALL_ROUNDER);
-              Assert.assertEquals("Hardik Pandya", sortedData.get(0).player);
-        } catch (CricketAnalyserException e) {
-            e.printStackTrace();
-        }
-    }
 }
