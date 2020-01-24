@@ -64,28 +64,6 @@ public class Bowler {
         this.fourWickets = fourWickets;
     }
 
-
-    @Override
-    public String toString() {
-        return "IPLBowling{" +
-                "pos=" + pos +
-                ", player='" + player + '\'' +
-                ", matches=" + matches +
-                ", innings=" + innings +
-                ", over=" + over +
-                ", runs=" + runs +
-                ", wickets=" + wickets +
-                ", bestBowlingIndex=" + bestBowlingIndex +
-                ", average=" + ball_average +
-                ", economy=" + economy +
-                ", strikeRate=" + strikeRate +
-                ", fourWickets=" + fourWickets +
-                ", fiveWickets=" + fiveWickets +
-                ", nullData='" + nullData + '\'' +
-                '}';
-    }
-
-
     public Bowler() {
     }
 }

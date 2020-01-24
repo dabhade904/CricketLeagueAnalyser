@@ -91,7 +91,7 @@ public class CricketLeagueDao {
     public CricketLeagueDao() {
     }
 
-        public Object getBatsmanDTO(CricketAnalyser.Cricket file) {
+    public Object getBatsmanDTO(CricketAnalyser.Cricket file) {
         if (file.equals(CricketAnalyser.Cricket.BATSMAN))
             return new Batsman(pos, player, matches, inns, notOut, runs, highScore, average, ballFaced, strikeRate, centuries, fifties, fours, sixs);
         return new Bowler(pos, player, matches, inns, over, runs, wickets, bestBowlingIndex, average, economy, strikeRate, fourWickets, fiveWickets);

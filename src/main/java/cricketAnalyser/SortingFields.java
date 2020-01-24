@@ -65,7 +65,7 @@ public class SortingFields {
         sortByFields.put(fields.BATTING_AND_BOWLING_AVG, batsmanComparator.thenComparing(bowlingAverage));
 
         Comparator<CricketLeagueDao>runWithWickets = Comparator.comparing(bowler -> bowler.runs*bowler.wickets,Comparator.reverseOrder());
-        sortByFields.put(fields.ALL_ROUNDER,runWithWickets);
+        sortByFields.put(fields.ALL_ROUNDER, runWithWickets);
 
         Comparator<CricketLeagueDao> comparator = sortByFields.get(parameter);
         return comparator;

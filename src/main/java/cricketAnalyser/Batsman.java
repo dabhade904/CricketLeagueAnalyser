@@ -66,25 +66,6 @@ public class Batsman {
     }
 
 
-    @Override
-    public String toString() {
-        return "{" +
-                "pos=" + pos +
-                ", player='" + player + '\'' +
-                ", matches=" + matches +
-                ", inns=" + inns +
-                ", notOut=" + notOut +
-                ", runs=" + runs +
-                ", highScore='" + highScore + '\'' +
-                ", average=" + average +
-                ", ballFaced=" + ballFaced +
-                ", strikeRate=" + strikeRate +
-                ", centuries=" + centuries +
-                ", halfCenturies=" + halfCenturies +
-                ", fours=" + fours +
-                ", sixes=" + sixes +
-                '}';
-    }
 
     public Batsman() {
     }
