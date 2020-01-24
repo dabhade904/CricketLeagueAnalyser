@@ -13,7 +13,6 @@ public class CricketAdapterFactory {
         } else {
             throw new CricketAnalyserException("INCORRECT_DATA", CricketAnalyserException.ExceptionType.CRICKET_FILE_PROBLEM);
         }
-
     }
 }
 
