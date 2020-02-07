@@ -7,10 +7,10 @@ import java.util.List;
 
 public class BowlerAnalyserTest {
     private static final String WRONG_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/WrongFileData.csv";
-    private static final String WRONG_CSV_FILE_TYPE = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/WrongFileType.txt";
+    private static final String WRONG_CSV_FILE_TYPE = "/home/admin1/Downloads/CricketLeagueAnalyser-master/src/test/resources/WrongFileType.txt";
     private static final String WRONG_CSV_FILE_PATH_DELIMITER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileDelimiter.csv";
     private static final String WRONG_CSV_FILE_PATH_HEADER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileHeader.csv";
-    private static final String IPL2019_WICKETS_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/IPL2019FactSheeMostWickets.csv";
+    private static final String IPL2019_WICKETS_CSV_FILE_PATH = "/home/admin1/Downloads/CricketLeagueAnalyser-master/src/test/resources/IPL2019FactSheeMostWickets.csv";
 
     @Test
     public void givenLeagueData_withWrongFile_shouldThrowException() {
@@ -20,7 +20,7 @@ public class BowlerAnalyserTest {
             exceptionRule.expect(CricketAnalyserException.class);
             censusAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, WRONG_CSV_FILE_PATH);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
         }
     }
 
@@ -46,7 +46,7 @@ public class BowlerAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, WRONG_CSV_FILE_PATH_DELIMITER);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
         }
     }
 
@@ -58,7 +58,7 @@ public class BowlerAnalyserTest {
         try {
             cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, WRONG_CSV_FILE_PATH_HEADER);
         } catch (CricketAnalyserException e) {
-            Assert.assertEquals(CricketAnalyserException.ExceptionType.DELIMITER_OR_HEADER_PROBLEM, e.type);
+            Assert.assertEquals(CricketAnalyserException.ExceptionType.UNABLE_TO_PARSE, e.type);
         }
     }
 

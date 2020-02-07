@@ -3,9 +3,7 @@ package cricketAnalyser;
 import java.util.*;
 
 public class CricketAdapterFactory {
-
-
-    public static <E> Map<String, CricketLeagueDao> getCricketData(CricketAnalyser.Cricket cricket, String... csvFilePath) throws CricketAnalyserException {
+    public <E> Map<String, CricketLeagueDao> getCricketData(CricketAnalyser.Cricket cricket, String... csvFilePath) throws CricketAnalyserException {
         if (cricket.equals(CricketAnalyser.Cricket.BATSMAN)) {
             return new BatsmanAdapter().loadCricketData(csvFilePath);
         } else if (cricket.equals(CricketAnalyser.Cricket.BOWLER)) {
@@ -15,4 +13,5 @@ public class CricketAdapterFactory {
         }
     }
 }
+
 

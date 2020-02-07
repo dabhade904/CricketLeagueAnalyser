@@ -5,24 +5,24 @@ import java.util.stream.Collectors;
 
 public class CricketAnalyser {
     Map<String, CricketLeagueDao> cricketMap = new HashMap<>();
-    private CricketAdapter cricketAdapter;
+    private CricketAdapterFactory cricketAdapterFactory;
     public Cricket cricket;
 
     public CricketAnalyser() {
 
     }
-
     public enum Cricket {
         BATSMAN, BOWLER
     }
 
-    public CricketAnalyser(Cricket cricket) {
-        this.cricket = cricket;
+    public CricketAnalyser(CricketAdapterFactory cricketAdapterFactory, Cricket cricket) {
+        this.cricketAdapterFactory = cricketAdapterFactory;
+        this.cricket=cricket;
     }
 
 
     public int loadCricketData(Cricket cricket, String... csvFilePath) throws CricketAnalyserException {
-        cricketMap = new CricketAdapterFactory().getCricketData(cricket, csvFilePath);
+        cricketMap = cricketAdapterFactory.getCricketData(cricket, csvFilePath);
         return cricketMap.size();
     }
 
