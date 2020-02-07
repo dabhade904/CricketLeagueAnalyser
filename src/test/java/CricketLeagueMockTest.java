@@ -18,34 +18,35 @@ public class CricketLeagueMockTest {
     private static final String IPL2019_RUNS_CSV_FILE_PATH = "/home/admin1/Downloads/CricketLeagueAnalyser-master/src/test/resources/IPL2019FactSheetMostRuns.csv";
 
     @Mock
-    CricketAdapterFactory cricketAdapterFactory;
+    CricketMock cricketMock;
 
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
 
-   @Test
+    Map<String, CricketLeagueDao> cricketMap = new HashMap<>();
+
+
+    @Test
     public void givenBatsmanDataCSVFIle_shouldReturnExactCount() {
-       try {
-           Map<String , CricketLeagueDao> cricketMap = new HashMap<>();
-           cricketMap.put("dgf",new CricketLeagueDao());
-          CricketAnalyser cricketAnalyser = new CricketAnalyser(cricketAdapterFactory,CricketAnalyser.Cricket.BATSMAN);
-           when(cricketAdapterFactory.getCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH)).thenReturn(cricketMap);
-            int numOfRecords=cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-           Assert.assertEquals(1,numOfRecords);
-       } catch (CricketAnalyserException e) {
-           e.printStackTrace();
-       }
+        CricketAnalyser cricketAnalyser = new CricketAnalyser(cricketMock);
+        cricketMap.put("sachhin", new CricketLeagueDao());
+        try {
+            when(cricketMock.loadCricketData(CricketAnalyser.Cricket.BATSMAN, IPL2019_RUNS_CSV_FILE_PATH)).thenReturn(cricketMap);
+            int numOfRecords = cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, IPL2019_RUNS_CSV_FILE_PATH);
+            Assert.assertEquals(1, numOfRecords);
+        } catch (CricketAnalyserException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
     public void givenBowlerDataCSVFIle_shouldReturnExactCount() {
+        CricketAnalyser cricketAnalyser = new CricketAnalyser(cricketMock);
         try {
-            Map<String , CricketLeagueDao> cricketMap = new HashMap<>();
-            cricketMap.put("dgf",new CricketLeagueDao());
-            CricketAnalyser cricketAnalyser = new CricketAnalyser(cricketAdapterFactory,CricketAnalyser.Cricket.BOWLER);
-            when(cricketAdapterFactory.getCricketData(CricketAnalyser.Cricket.BOWLER,IPL2019_WICKETS_CSV_FILE_PATH)).thenReturn(cricketMap);
-            int numOfRecords=cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN,IPL2019_RUNS_CSV_FILE_PATH);
-            Assert.assertEquals(1,numOfRecords);
+            cricketMap.put("dgf", new CricketLeagueDao());
+            when(cricketMock.loadCricketData(CricketAnalyser.Cricket.BOWLER, IPL2019_WICKETS_CSV_FILE_PATH)).thenReturn(cricketMap);
+            int numOfRecords = cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BOWLER, IPL2019_WICKETS_CSV_FILE_PATH);
+            Assert.assertEquals(1, numOfRecords);
         } catch (CricketAnalyserException e) {
             e.printStackTrace();
         }

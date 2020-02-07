@@ -1,36 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java" line="17" mnemonic="9" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="fd1e0fde-9b97-44da-beb2-96622eb3f8ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/CSVState.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/CSVState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/CensusAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/CensusAnalyser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/CensusAnalyserException$ExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/CensusAnalyserException$ExceptionType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/out/production/classes/censusanalyser/LoadObjectCampratorEx.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/out/test/classes/censusanalyser/CensusAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/out/test/classes/censusanalyser/CensusAnalyserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/out/test/resources/IndiaStateCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/out/test/resources/IndiaStateCode.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/CSVState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/CSVState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/CensusAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/CensusAnalyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/CensusAnalyserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/CensusAnalyserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/main/java/censusanalyser/LoadObjectCampratorEx.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/test/java/censusanalyser/CensusAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/test/java/censusanalyser/CensusAnalyserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CensusAnalyser/src/test/resources/IndiaStateCode.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../CensusAnalyser/src/test/resources/IndiaStateCode.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/Batsman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/Batsman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/Batsman.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/Batsman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/BatsmanAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/BatsmanAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/Bowler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/Bowler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/BowlerAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/BowlerAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAdapterFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAdapterFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyser$Cricket.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyser$Cricket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyser.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyserException$ExceptionType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyserException$ExceptionType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyserException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketAnalyserException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketLeagueDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/CricketLeagueDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/SortingFields$fields.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/SortingFields$fields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/SortingFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/cricketAnalyser/SortingFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/BatsmanAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/BatsmanAnalyserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/BattingAndBowlingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/BattingAndBowlingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/BowlerAnalyserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/BowlerAnalyserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/BowlerAnalyserTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-BowlerAnalyserTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapterFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CricketLeagueMockTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CricketLeagueMockTest.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +57,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -69,111 +86,6 @@
   <component name="FavoritesManager">
     <favorites_list name="CricketLeague" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/Batsman.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="68" column="3" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="67" selection-start-line="67" selection-end-line="68" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapterFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#389#390#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BattingAndBowlingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -185,127 +97,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CsvBindByName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Batsman.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostRuns.csv" />
-        <option value="$PROJECT_DIR$/src/test/resources/BatsmanCSV.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/CricketAnalyserException/ExceptionType/CENSUS_FILE_PROBLEM.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/WrongFileData.csv" />
-        <option value="$PROJECT_DIR$/src/test/resources/WrongFileType.txt" />
-        <option value="$PROJECT_DIR$/src/test/resources/wrongFileHeader.csv" />
-        <option value="$PROJECT_DIR$/src/test/resources/wrongFileDelimiter.csv" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv" />
-        <option value="$PROJECT_DIR$/src/test/java/BowlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/Crickte.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CrickteAnalayser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueLoader.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CricketAnalyserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/CricketAnalyserException/BowlerAnalyserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostRuns.csv" />
-        <option value="$PROJECT_DIR$/src/test/resources/IPL2019FactSheeMostWickets.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/BowlerAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/Bowler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/BatsmanAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BattingAndBowlingTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapterFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cricketAnalyser/Batsman.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="27" />
     <option name="width" value="1161" />
     <option name="height" value="636" />
   </component>
+  <component name="ProjectId" id="1XT76qBgktiL1Sy2kW3tyioG5Qq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cricketAnalyser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CricketLeague" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CricketLeague" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CSVBuilderJar/build/libs/CSVBuilderJar-1.0-SNAPSHOT.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/CSVBuilderJar/build/libs/CSVBuilderJar-1.0-SNAPSHOT.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -324,19 +131,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Gradle.BattingAndBowlingTest">
+  <component name="RunManager" selected="Gradle.CricketLeagueMockTest.givenBowlerDataCSVFIle_shouldReturnExactCount">
     <configuration name="BatsmanAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -357,12 +152,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BattingAndBowlingTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BowlerAnalyserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BattingAndBowlingTest&quot;" />
+        <option name="scriptParameters" value="--tests &quot;BowlerAnalyserTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -377,12 +172,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CricketLeagueMockTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult&quot;" />
+        <option name="scriptParameters" value="--tests &quot;CricketLeagueMockTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -397,12 +192,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CricketLeagueMockTest.givenBatsmanDataCSVFIle_shouldReturnExactCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder&quot;" />
+        <option name="scriptParameters" value="--tests &quot;CricketLeagueMockTest.givenBatsmanDataCSVFIle_shouldReturnExactCount&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -417,12 +212,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CricketLeagueMockTest.givenBowlerDataCSVFIle_shouldReturnExactCount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder&quot;" />
+        <option name="scriptParameters" value="--tests &quot;CricketLeagueMockTest.givenBowlerDataCSVFIle_shouldReturnExactCount&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -438,19 +233,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" />
-      <item itemvalue="Gradle.BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" />
-      <item itemvalue="Gradle.BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" />
       <item itemvalue="Gradle.BatsmanAnalyserTest" />
-      <item itemvalue="Gradle.BattingAndBowlingTest" />
+      <item itemvalue="Gradle.CricketLeagueMockTest.givenBowlerDataCSVFIle_shouldReturnExactCount" />
+      <item itemvalue="Gradle.BowlerAnalyserTest" />
+      <item itemvalue="Gradle.CricketLeagueMockTest" />
+      <item itemvalue="Gradle.CricketLeagueMockTest.givenBatsmanDataCSVFIle_shouldReturnExactCount" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BattingAndBowlingTest" />
+        <item itemvalue="Gradle.CricketLeagueMockTest.givenBowlerDataCSVFIle_shouldReturnExactCount" />
+        <item itemvalue="Gradle.CricketLeagueMockTest.givenBatsmanDataCSVFIle_shouldReturnExactCount" />
+        <item itemvalue="Gradle.CricketLeagueMockTest" />
         <item itemvalue="Gradle.BatsmanAnalyserTest" />
-        <item itemvalue="Gradle.BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" />
-        <item itemvalue="Gradle.BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" />
-        <item itemvalue="Gradle.BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" />
+        <item itemvalue="Gradle.BowlerAnalyserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -467,123 +262,35 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="BowlerAnalyserTest - 2020.01.24 at 11h 47m 14s.xml">
-      <configuration name="BowlerAnalyserTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BowlerAnalyserTest_whenGivenBowlerCSV_sortOnBowlingAverageWithStrikeRate_shouldReturnResult - 2020.01.24 at 11h 49m 09s.xml">
-      <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAverageWithStrikeRate_shouldReturnResult" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BowlerAnalyserTest_whenGivenBowlerCSV_sortOnBowlingAverageWithStrikeRate_shouldReturnResult - 2020.01.24 at 11h 49m 25s.xml">
-      <configuration name="BowlerAnalyserTest.whenGivenBowlerCSV_sortOnBowlingAverageWithStrikeRate_shouldReturnResult" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BowlerAnalyserTest_givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult - 2020.01.24 at 11h 49m 53s.xml">
-      <configuration name="BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BowlerAnalyserTest_givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult - 2020.01.24 at 11h 50m 46s.xml">
-      <configuration name="BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BowlerAnalyserTest_givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder - 2020.01.24 at 12h 12m 38s.xml">
-      <configuration name="BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BowlerAnalyserTest_givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder - 2020.01.24 at 12h 22m 02s.xml">
-      <configuration name="BowlerAnalyserTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BattingAndBowlingTest_givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder - 2020.01.24 at 12h 33m 23s.xml">
-      <configuration name="BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_whenSorted_ShouldReturnAllRounder" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BattingAndBowlingTest_givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult - 2020.01.24 at 12h 33m 33s.xml">
-      <configuration name="BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="BattingAndBowlingTest_givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult - 2020.01.24 at 12h 33m 53s.xml">
-      <configuration name="BattingAndBowlingTest.givenLeagueBowlerAndBatsmanCSVFile_WhenSortedOnAverage_ShouldReturnSortedResult" configurationId="GradleRunConfiguration" />
-    </history-entry>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.2386273" />
-      <window_info id="Structure" order="1" sideWeight="0.50121063" side_tool="true" weight="0.2793296" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" />
-      <window_info id="Favorites" order="7" sideWeight="0.50256413" side_tool="true" weight="0.28411812" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33876222" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32736155" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.3306189" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24980047" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.32960895" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32960895" />
-      <window_info anchor="right" id="Gradle" order="9" weight="0.32960895" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.27613726" />
-      <window_info id="Structure" order="1" sideWeight="0.50121063" side_tool="true" weight="0.2793296" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Learn" order="6" />
-      <window_info id="Favorites" order="7" sideWeight="0.50256413" side_tool="true" weight="0.28411812" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33876222" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32736155" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="10" weight="0.3306189" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24980047" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.32960895" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32960895" />
-      <window_info anchor="right" id="Gradle" order="9" weight="0.32960895" />
-    </layout-to-restore>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapter.java</url>
-          <line>23</line>
-          <properties class="cricketAnalyser.CricketAdapter" method="loadCricketData">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="524" y="115" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1581066449346">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="524" y="115" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1299.741@67.27.1299.741" timestamp="1581066449346" />
+    <state width="1253" height="181" key="GridCell.Tab.0.bottom" timestamp="1581066627073">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="181" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1581066627073" />
+    <state width="1253" height="181" key="GridCell.Tab.0.center" timestamp="1581066627073">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="181" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1581066627073" />
+    <state width="1253" height="181" key="GridCell.Tab.0.left" timestamp="1581066627072">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="181" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1581066627072" />
+    <state width="1253" height="181" key="GridCell.Tab.0.right" timestamp="1581066627073">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="181" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1581066627073" />
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1581058078492">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1581058078492" />
+    <state x="412" y="27" width="598" height="741" key="refactoring.ChangeSignatureDialog" timestamp="1581060204579">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="412" y="27" width="598" height="741" key="refactoring.ChangeSignatureDialog/67.27.1299.741@67.27.1299.741" timestamp="1581060204579" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -591,309 +298,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CricketLeague$CricketAnalyserTest_whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage.ic" NAME="CricketAnalyserTest.whenGivenBowlerCSV_whenSortOnAverage_shouldReturnTopAverage Coverage Results" MODIFIED="1579601539267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/4.0/757a89a7afdda196a5dc0a187e80f2888c54cf6b/opencsv-4.0-sources.jar!/com/opencsv/bean/HeaderColumnNameMappingStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BatsmanCSV.csv" />
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostRuns.csv" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueException.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/CricketAnalyserException/ExceptionType/CENSUS_FILE_PROBLEM.java" />
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/4.0/757a89a7afdda196a5dc0a187e80f2888c54cf6b/opencsv-4.0-sources.jar!/com/opencsv/bean/CsvToBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="353" column="8" selection-start-line="353" selection-start-column="8" selection-end-line="353" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/wrongFileHeader.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../CSVBuilderJar/build/libs/CSVBuilderJar-1.0-SNAPSHOT.jar!/cessusanalyser/ICSVBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../CSVBuilderJar/build/libs/CSVBuilderJar-1.0-SNAPSHOT.jar!/cessusanalyser/CSVBuilderFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../CSVBuilderJar/build/libs/CSVBuilderJar-1.0-SNAPSHOT.jar!/cessusanalyser/OpenCSVBuilder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../CSVBuilderJar/build/libs/CSVBuilderJar-1.0-SNAPSHOT.jar!/cessusanalyser/CSVBuilderException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/wrongFileDelimiter.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Iterable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/WrongFileType.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/WrongFileData.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="100" column="42" selection-start-line="100" selection-start-column="42" selection-end-line="100" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactsheetMostWkts.csv" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/CricketAnalyserException/BowlerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/BowlerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueFactory.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Thread.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="197" column="19" selection-start-line="197" selection-start-column="19" selection-end-line="197" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/reports/tests/test/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/Crickte.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CrickteAnalayser.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Comparator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/CricketAnalyserException/BowlerAnalyserTest.java" />
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/concurrent/ThreadPoolExecutor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="393" selection-start-line="393" selection-end-line="393" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/4.0/757a89a7afdda196a5dc0a187e80f2888c54cf6b/opencsv-4.0-sources.jar!/com/opencsv/bean/concurrent/ProcessCsvLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a6dc5db8a12928e583bd3f23e72d3ab611ecd58f/gson-2.2.4-sources.jar!/com/google/gson/Gson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="687" column="15" selection-start-line="687" selection-start-column="15" selection-end-line="687" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Class.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="175" selection-start-line="175" selection-end-line="175" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/statements/InvokeMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/model/FrameworkMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#1657#1658#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactSheetMostRuns.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="370" selection-start-line="370" selection-end-line="370" />
-          <folding>
-            <element signature="e#2922#2923#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-            <element signature="e#10310#10449#0" expanded="true" />
-            <element signature="e#10448#10449#0" expanded="true" />
-            <element signature="e#11040#11204#0" expanded="true" />
-            <element signature="e#11203#11204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/IPL2019FactSheeMostWickets.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="93" column="14" selection-start-line="93" selection-start-column="14" selection-end-line="93" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/runners/BlockJUnit4ClassRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-          <folding>
-            <element signature="e#10265#10266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/BatsmanAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/Bowler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="78" column="1" lean-forward="true" selection-start-line="78" selection-start-column="1" selection-end-line="78" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/BowlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BattingAndBowlingTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BowlerAnalyserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BatsmanAnalyserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/SortingFields.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="67" selection-start-line="67" selection-end-line="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketLeagueDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyserException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/CricketAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cricketAnalyser/Batsman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="68" column="3" selection-start-line="68" selection-start-column="3" selection-end-line="68" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

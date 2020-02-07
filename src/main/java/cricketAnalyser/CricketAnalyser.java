@@ -4,25 +4,34 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class CricketAnalyser {
+
     Map<String, CricketLeagueDao> cricketMap = new HashMap<>();
-    private CricketAdapterFactory cricketAdapterFactory;
+   // private CricketAdapterFactory cricketAdapterFactory;
+    public CricketMock cricketMock=new CricketMock();
     public Cricket cricket;
 
-    public CricketAnalyser() {
-
+    public CricketAnalyser(CricketMock cricketMock) {
+        this.cricketMock = cricketMock;
     }
+
+    public CricketAnalyser() {
+    }
+
+    public CricketAnalyser(Cricket batsman) {
+    }
+
     public enum Cricket {
         BATSMAN, BOWLER
     }
 
-    public CricketAnalyser(CricketAdapterFactory cricketAdapterFactory, Cricket cricket) {
-        this.cricketAdapterFactory = cricketAdapterFactory;
+    public CricketAnalyser(CricketMock cricketMock, Cricket cricket) {
+        this.cricketMock =cricketMock;
         this.cricket=cricket;
     }
 
 
     public int loadCricketData(Cricket cricket, String... csvFilePath) throws CricketAnalyserException {
-        cricketMap = cricketAdapterFactory.getCricketData(cricket, csvFilePath);
+        cricketMap = cricketMock.loadCricketData(cricket, csvFilePath);
         return cricketMap.size();
     }
 

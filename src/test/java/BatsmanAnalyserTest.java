@@ -16,7 +16,7 @@ public class BatsmanAnalyserTest {
 
     @Test
     public void givenLeagueDataCSVFIle_shouldReturnExactCount() throws CricketAnalyserException {
-            CricketAnalyser cricketAnalyser = new CricketAnalyser();
+        CricketAnalyser cricketAnalyser = new CricketAnalyser();
         int loadData = cricketAnalyser.loadCricketData(CricketAnalyser.Cricket.BATSMAN, IPL2019_RUNS_CSV_FILE_PATH);
         Assert.assertEquals(100, loadData);
     }
