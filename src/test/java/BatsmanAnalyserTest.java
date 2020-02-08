@@ -7,9 +7,9 @@ import java.util.List;
 
 public class BatsmanAnalyserTest {
 
-    private static final String IPL2019_RUNS_CSV_FILE_PATH = "/home/admin1/Downloads/CricketLeagueAnalyser-master/src/test/resources/IPL2019FactSheetMostRuns.csv";
+    private static final String IPL2019_RUNS_CSV_FILE_PATH = "/home/admin1/Downloads/CricketLeagueAnalyser/src/test/resources/IPL2019FactSheetMostRuns.csv";
     private static final String WRONG_CSV_FILE_PATH = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/WrongFileData.csv";
-    private static final String WRONG_CSV_FILE_TYPE = "/home/admin1/Downloads/CricketLeagueAnalyser-master/src/test/resources/WrongFileType.txt";
+    private static final String WRONG_CSV_FILE_TYPE = "/home/admin1/Downloads/CricketLeagueAnalyser/src/test/resources/WrongFileType.txt";
     private static final String WRONG_CSV_FILE_PATH_DELIMITER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileDelimiter.csv";
     private static final String WRONG_CSV_FILE_PATH_HEADER = "/home/admin1/IdeaProjects/CensusAnalyser/CricketLeague/src/test/resources/wrongFileHeader.csv";
 
@@ -223,5 +223,4 @@ public class BatsmanAnalyserTest {
             e.printStackTrace();
         }
     }
-
 }

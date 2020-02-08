@@ -65,8 +65,6 @@ public class Batsman {
         this.ballFaced=ballFaced;
     }
 
-
-
     public Batsman() {
     }
 }

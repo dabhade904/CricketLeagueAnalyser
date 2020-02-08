@@ -11,6 +11,7 @@ public class CricketAnalyserException extends Exception {
         CRICKET_FILE_PROBLEM,
         UNABLE_TO_PARSE,
         DELIMITER_OR_HEADER_PROBLEM,
+        NULL_POINTER_EXCEPTION
     }
 
     public CricketAnalyserException(String message, ExceptionType type) {
